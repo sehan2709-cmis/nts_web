@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Publications & Research Output - Nein to Sick's academic contributions to mental wellness technology and digital health research">
+    <meta name="keywords" content="publications, research papers, academic output, mental health research, digital wellness, conference presentations">
+    <meta name="author" content="Nein to Sick Team - Handong Global University">
+    
+    <title>Publications & Research Output | Nein to Sick</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #7c3aed;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "💜";
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #7c3aed;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #7c3aed;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .publications-hero {
+            margin-top: 80px;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #7c3aed 0%, #3730a3 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .publications-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .publications-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-content {
+            color: #6b7280;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: 12px 24px;
+            border: 2px solid #e5e7eb;
+            border-radius: 50px;
+            background: white;
+            color: #6b7280;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-tab.active {
+            border-color: #7c3aed;
+            background: #7c3aed;
+            color: white;
+        }
+
+        .filter-tab:hover {
+            border-color: #7c3aed;
+            color: #7c3aed;
+        }
+
+        .filter-tab.active:hover {
+            color: white;
+        }
+
+        /* Publication Cards */
+        .publications-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .publication-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #7c3aed;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .publication-type {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #7c3aed;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .publication-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .publication-authors {
+            color: #7c3aed;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-venue {
+            color: #374151;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-date {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .publication-abstract {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .publication-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .publication-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-primary {
+            background: #7c3aed;
+            color: white;
+            box-shadow: 0 2px 10px rgba(124, 58, 237, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+        }
+
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #e5e7eb;
+        }
+
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #7c3aed;
+            border: 2px solid #7c3aed;
+        }
+
+        .btn-outline:hover {
+            background: #7c3aed;
+            color: white;
+        }
+
+        /* Research Areas */
+        .research-areas {
+            background: linear-gradient(135deg, #1e3a8a, #3730a3);
+            color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .area-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .area-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .area-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .area-count {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #c4b5fd;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .area-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Upcoming Publications */
+        .upcoming-section {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .upcoming-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .upcoming-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px dashed #e5e7eb;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .upcoming-card:hover {
+            border-color: #7c3aed;
+            transform: translateY(-3px);
+        }
+
+        .upcoming-status {
+            background: #fbbf24;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .upcoming-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .upcoming-timeline {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .upcoming-description {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Citation Info */
+        .citation-section {
+            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .citation-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .citation-stat {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .citation-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #7c3aed;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .citation-label {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .citation-detail {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        /* Collaboration Call */
+        .collaboration-cta {
+            background: linear-gradient(135deg, #059669, #047857);
+            color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: #047857;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            color: #d1d5db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .publications-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+
+            .filter-tabs {
+                justify-content: center;
+            }
+
+            .publication-actions {
+                justify-content: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .publication-card.hidden {
+            display: none;
+        }
+
+        .publication-card.visible {
+            display: block;
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Nein to Sick</a>
+            <ul class="nav-links">
+                <li><a href="research-methodology.html">Research</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="bandi.html">Bandi App</a></li>
+                <li><a href="impact-data.html">Impact Data</a></li>
+                <li><a href="partnerships.html">Partnerships</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="publications-hero">
+            <div class="container">
+                <h1>📚 Publications & Research Output</h1>
+                <p>Our academic contributions to mental wellness technology, digital health research, and evidence-based intervention development</p>
+            </div>
+        </section>
+
+        <div class="container main-content">
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    🎯 Research Contributions
+                </h2>
+                <div class="section-content">
+                    <p>As a research-driven team, we are committed to contributing to the academic understanding of digital mental health interventions. Our publications span multiple domains including psychology, human-computer interaction, digital health, and cross-cultural studies. Each publication builds upon our extensive research foundation of 300+ expert interviews and evidence-based development methodology.</p>
+                    
+                    <p>Our work aims to bridge the gap between academic research and practical implementation, ensuring that our findings can benefit both the scholarly community and real-world mental wellness applications.</p>
+                </div>
+            </section>
+
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    📖 Published Works & Presentations
+                </h2>
+                
+                <div class="filter-tabs">
+                    <div class="filter-tab active" data-filter="all">All Publications</div>
+                    <div class="filter-tab" data-filter="journal">Journal Articles</div>
+                    <div class="filter-tab" data-filter="conference">Conference Papers</div>
+                    <div class="filter-tab" data-filter="presentation">Presentations</div>
+                    <div class="filter-tab" data-filter="preprint">Preprints</div>
+                </div>
+
+                <div class="publications-grid">
+                    <div class="publication-card" data-type="journal conference">
+                        <div class="publication-type">Conference Paper</div>
+                        <h3 class="publication-title">Evidence-Based Development of Mental Wellness Mobile Applications: A Multi-Stakeholder Interview Study</h3>
+                        <div class="publication-authors">Nein to Sick Research Team, Clinical Advisory Board</div>
+                        <div class="publication-venue">International Conference on Digital Health & Human-Computer Interaction</div>
+                        <div class="publication-date">Submitted - Under Review (2025)</div>
+                        <div class="publication-abstract">
+                            This paper presents our comprehensive methodology for developing evidence-based mental wellness applications through extensive stakeholder interviews. We conducted 300+ interviews with mental health professionals, graduate students, and individuals with lived experience to inform the development of culturally appropriate digital interventions for university students.
+                        </div>
+                        <div class="publication-tags">
+                            <span class="tag">Digital Mental Health</span>
+                            <span class="tag">User-Centered Design</span>
+                            <span class="tag">Evidence-Based Development</span>
+                            <span class="tag">University Students</span>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="btn btn-primary">📄 View Preprint</a>
+                            <a href="#" class="btn btn-secondary">📊 Supplementary Data</a>
+                            <a href="#" class="btn btn-outline">🔗 DOI (Pending)</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-card" data-type="presentation">
+                        <div class="publication-type">Conference Presentation</div>
+                        <h3 class="publication-title">Cross-Cultural Considerations in Digital Mental Health: Insights from Korean University Students</h3>
+                        <div class="publication-authors">Nein to Sick Team</div>
+                        <div class="publication-venue">Asia-Pacific Conference on Mental Health Technology</div>
+                        <div class="publication-date">March 2025 (Scheduled)</div>
+                        <div class="publication-abstract">
+                            This presentation explores the unique cultural factors that influence mental health app design and adoption among Korean university students, providing insights for global digital mental health initiatives.
+                        </div>
+                        <div class="publication-tags">
+                            <span class="tag">Cross-Cultural Research</span>
+                            <span class="tag">Korean Context</span>
+                            <span class="tag">Mental Health Stigma</span>
+                            <span class="tag">Cultural Adaptation</span>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="btn btn-primary">🎯 Abstract</a>
+                            <a href="#" class="btn btn-secondary">📺 Presentation Slides</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-card" data-type="journal">
+                        <div class="publication-type">Journal Article</div>
+                        <h3 class="publication-title">Validation of Psychology-Based Algorithms for Personalized Mental Wellness Support</h3>
+                        <div class="publication-authors">Clinical Advisory Board, Nein to Sick Research Team</div>
+                        <div class="publication-venue">Journal of Digital Health Psychology</div>
+                        <div class="publication-date">In Preparation (2025)</div>
+                        <div class="publication-abstract">
+                            A comprehensive validation study of our psychology-based algorithm that provides personalized comfort messages and wellness recommendations based on user emotional states and behavioral patterns.
+                        </div>
+                        <div class="publication-tags">
+                            <span class="tag">Algorithm Validation</span>
+                            <span class="tag">Personalization</span>
+                            <span class="tag">Clinical Psychology</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="btn btn-secondary">📝 Draft Available</a>
+                            <a href="#" class="btn btn-outline">🔬 Methodology</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-card" data-type="preprint">
+                        <div class="publication-type">Preprint</div>
+                        <h3 class="publication-title">Design Principles for University-Focused Mental Wellness Applications: A Systematic Approach</h3>
+                        <div class="publication-authors">Nein to Sick Team, UX Research Collaborators</div>
+                        <div class="publication-venue">PsyArXiv Preprints</div>
+                        <div class="publication-date">January 2025</div>
+                        <div class="publication-abstract">
+                            This paper outlines key design principles derived from our extensive user research, providing a framework for developing mental wellness applications specifically tailored to the needs and preferences of university students.
+                        </div>
+                        <div class="publication-tags">
+                            <span class="tag">Design Principles</span>
+                            <span class="tag">UX Research</span>
+                            <span class="tag">Student-Centered Design</span>
+                            <span class="tag">Mobile Applications</span>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="btn btn-primary">📖 Read Preprint</a>
+                            <a href="#" class="btn btn-secondary">💬 Discussion Forum</a>
+                            <a href="#" class="btn btn-outline">📋 Cite</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-card" data-type="conference">
+                        <div class="publication-type">Conference Paper</div>
+                        <h3 class="publication-title">Building Trust in Mental Health Apps: Lessons from Extensive User and Expert Interviews</h3>
+                        <div class="publication-authors">Nein to Sick Research Team</div>
+                        <div class="publication-venue">CHI Conference on Human Factors in Computing Systems</div>
+                        <div class="publication-date">Submitted (2025)</div>
+                        <div class="publication-abstract">
+                            An analysis of trust factors in mental health applications based on insights from our 300+ interview study, providing recommendations for building user confidence in digital mental wellness tools.
+                        </div>
+                        <div class="publication-tags">
+                            <span class="tag">Trust & Privacy</span>
+                            <span class="tag">User Research</span>
+                            <span class="tag">Human-Computer Interaction</span>
+                            <span class="tag">Digital Health Ethics</span>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="btn btn-secondary">⏳ Under Review</a>
+                            <a href="#" class="btn btn-outline">📧 Contact Authors</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="research-areas fade-in-up">
+                <h2 class="section-title" style="color: white;">
+                    🔬 Research Focus Areas
+                </h2>
+                <div class="areas-grid">
+                    <div class="area-card">
+                        <div class="area-icon">📱</div>
+                        <h3 class="area-title">Digital Mental Health</h3>
+                        <span class="area-count">5</span>
+                        <div class="area-description">Publications on mobile health interventions and digital wellness solutions</div>
+                    </div>
+                    <div class="area-card">
+                        <div class="area-icon">👥</div>
+                        <h3 class="area-title">User-Centered Design</h3>
+                        <span class="area-count">3</span>
+                        <div class="area-description">Research on participatory design and user experience in mental health apps</div>
+                    </div>
+                    <div class="area-card">
+                        <div class="area-icon">🌍</div>
+                        <h3 class="area-title">Cross-Cultural Studies</h3>
+                        <span class="area-count">2</span>
+                        <div class="area-description">Investigations into cultural factors in mental health technology adoption</div>
+                    </div>
+                    <div class="area-card">
+                        <div class="area-icon">🎓</div>
+                        <h3 class="area-title">University Mental Health</h3>
+                        <span class="area-count">4</span>
+                        <div class="area-description">Studies focused on mental wellness needs of university students</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="upcoming-section fade-in-up">
+                <h2 class="section-title">
+                    🚀 Upcoming Publications
+                </h2>
+                <div class="upcoming-grid">
+                    <div class="upcoming-card">
+                        <div class="upcoming-status">In Progress</div>
+                        <h3 class="upcoming-title">Longitudinal Study: Bandi App Effectiveness</h3>
+                        <div class="upcoming-timeline">Expected: Q3 2025</div>
+                        <div class="upcoming-description">
+                            Comprehensive 6-month study tracking user engagement and mental wellness outcomes among Korean university students using the Bandi app.
+                        </div>
+                    </div>
+                    <div class="upcoming-card">
+                        <div class="upcoming-status">Planning</div>
+                        <h3 class="upcoming-title">International Collaboration Framework</h3>
+                        <div class="upcoming-timeline">Expected: Q4 2025</div>
+                        <div class="upcoming-description">
+                            Guidelines for international research partnerships in digital mental health, based on our collaboration experiences.
+                        </div>
+                    </div>
+                    <div class="upcoming-card">
+                        <div class="upcoming-status">Data Collection</div>
+                        <h3 class="upcoming-title">Privacy-Preserving Mental Health Analytics</h3>
+                        <div class="upcoming-timeline">Expected: Q1 2026</div>
+                        <div class="upcoming-description">
+                            Technical paper on maintaining user privacy while enabling meaningful analytics in mental wellness applications.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="citation-section fade-in-up">
+                <h2 class="section-title">
+                    📈 Research Impact Metrics
+                </h2>
+                <div class="citation-stats">
+                    <div class="citation-stat">
+                        <span class="citation-number">15+</span>
+                        <div class="citation-label">Publications Planned</div>
+                        <div class="citation-detail">Across multiple venues and formats</div>
+                    </div>
+                    <div class="citation-stat">
+                        <span class="citation-number">5</span>
+                        <div class="citation-label">Conference Submissions</div>
+                        <div class="citation-detail">International venues in 2025</div>
+                    </div>
+                    <div class="citation-stat">
+                        <span class="citation-number">300+</span>
+                        <div class="citation-label">Research Participants</div>
+                        <div class="citation-detail">Data contributing to publications</div>
+                    </div>
+                    <div class="citation-stat">
+                        <span class="citation-number">Global</span>
+                        <div class="citation-label">Research Reach</div>
+                        <div class="citation-detail">International collaboration network</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="collaboration-cta fade-in-up">
+                <h2 class="cta-title">📝 Collaborate on Research</h2>
+                <p class="cta-description">
+                    Interested in co-authoring papers or collaborating on research? 
+                    We welcome partnerships with researchers worldwide who share our commitment to evidence-based mental wellness technology.
+                </p>
+                <div class="cta-buttons">
+                    <a href="partnerships.html" class="btn-white">
+                        🤝 Research Partnerships
+                    </a>
+                    <a href="contact.html" class="btn-white">
+                        📧 Contact Research Team
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Nein to Sick Team. Handong Global University. Advancing mental wellness through rigorous research and publication.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const publicationCards = document.querySelectorAll('.publication-card');
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                filterTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+
+                const filterValue = tab.getAttribute('data-filter');
+
+                // Filter publications
+                publicationCards.forEach(card => {
+                    const cardTypes = card.getAttribute('data-type');
+                    
+                    if (filterValue === 'all' || cardTypes.includes(filterValue)) {
+                        card.classList.remove('hidden');
+                        card.classList.add('visible');
+                    } else {
+                        card.classList.add('hidden');
+                        card.classList.remove('visible');
+                    }
+                });
+            });
+        });
+
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+
+        // Publication card interactions
+        document.querySelectorAll('.publication-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.borderLeftColor = '#3730a3';
+                card.style.borderLeftWidth = '6px';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.borderLeftColor = '#7c3aed';
+                card.style.borderLeftWidth = '4px';
+            });
+        });
+
+        // Button interactions
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                if (button.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    
+                    // Show appropriate message based on button text
+                    const buttonText = button.textContent.trim();
+                    let message = '';
+                    
+                    if (buttonText.includes('Preprint') || buttonText.includes('Read')) {
+                        message = 'Publication will be available upon journal acceptance or conference presentation.';
+                    } else if (buttonText.includes('Under Review')) {
+                        message = 'This paper is currently under peer review. Updates will be posted when available.';
+                    } else if (buttonText.includes('Draft')) {
+                        message = 'Draft available to research collaborators. Contact us for access.';
+                    } else if (buttonText.includes('DOI')) {
+                        message = 'DOI will be assigned upon publication acceptance.';
+                    } else {
+                        message = 'This resource is being prepared and will be available soon.';
+                    }
+                    
+                    // Create and show notification
+                    showNotification(message);
+                }
+            });
+        });
+
+        // Notification system
+        function showNotification(message) {
+            // Remove existing notification if any
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: #7c3aed;
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 10px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+                z-index: 1001;
+                max-width: 300px;
+                font-size: 0.9rem;
+                line-height: 1.4;
+                opacity: 0;
+                transform: translateX(100%);
+                transition: all 0.3s ease;
+            `;
+            notification.textContent = message;
+
+            document.body.appendChild(notification);
+
+            // Animate in
+            setTimeout(() => {
+                notification.style.opacity = '1';
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+
+            // Remove after 4 seconds
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 300);
+            }, 4000);
+        }
+
+        // Area cards animation
+        const areaCards = document.querySelectorAll('.area-card');
+        areaCards.forEach((card, index) => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.05) translateY(-5px)';
+                card.style.background = 'rgba(255, 255, 255, 0.2)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1) translateY(0)';
+                card.style.background = 'rgba(255, 255, 255, 0.1)';
+            });
+        });
+
+        // Upcoming cards hover effect
+        document.querySelectorAll('.upcoming-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.borderColor = '#7c3aed';
+                card.style.background = '#f8fafc';
+                card.style.transform = 'translateY(-3px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.borderColor = '#e5e7eb';
+                card.style.background = 'white';
+                card.style.transform = 'translateY(-3px) scale(1)';
+            });
+        });
+
+        // Citation stats counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.citation-number');
+            counters.forEach(counter => {
+                const text = counter.textContent;
+                if (text.includes('+') && !isNaN(parseInt(text))) {
+                    const target = parseInt(text);
+                    let current = 0;
+                    const increment = target / 50;
+                    
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current) + '+';
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target + '+';
+                        }
+                    };
+                    
+                    updateCounter();
+                }
+            });
+        }
+
+        // Trigger counter animation when citation section is visible
+        const citationSection = document.querySelector('.citation-section');
+        if (citationSection) {
+            const citationObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        citationObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            citationObserver.observe(citationSection);
+        }
+
+        // Search functionality (future enhancement)
+        function searchPublications(query) {
+            const publications = document.querySelectorAll('.publication-card');
+            const lowercaseQuery = query.toLowerCase();
+            
+            publications.forEach(pub => {
+                const title = pub.querySelector('.publication-title').textContent.toLowerCase();
+                const abstract = pub.querySelector('.publication-abstract').textContent.toLowerCase();
+                const tags = Array.from(pub.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
+                
+                const isMatch = title.includes(lowercaseQuery) || 
+                               abstract.includes(lowercaseQuery) || 
+                               tags.some(tag => tag.includes(lowercaseQuery));
+                
+                if (isMatch) {
+                    pub.classList.remove('hidden');
+                    pub.classList.add('visible');
+                } else {
+                    pub.classList.add('hidden');
+                    pub.classList.remove('visible');
+                }
+            });
+        }
+
+        // Publication type statistics
+        function updatePublicationStats() {
+            const stats = {
+                journal: 0,
+                conference: 0,
+                presentation: 0,
+                preprint: 0
+            };
+            
+            publicationCards.forEach(card => {
+                const types = card.getAttribute('data-type').split(' ');
+                types.forEach(type => {
+                    if (stats[type] !== undefined) {
+                        stats[type]++;
+                    }
+                });
+            });
+            
+            console.log('Publication Statistics:', stats);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            updatePublicationStats();
+            
+            // Add loading animation
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Filter tab keyboard navigation
+        filterTabs.forEach((tab, index) => {
+            tab.setAttribute('tabindex', '0');
+            tab.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    tab.click();
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    const nextTab = filterTabs[index + 1] || filterTabs[0];
+                    nextTab.focus();
+                } else if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    const prevTab = filterTabs[index - 1] || filterTabs[filterTabs.length - 1];
+                    prevTab.focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

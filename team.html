@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the Nein to Sick team - Mission-driven developers and designers from Handong Global University creating evidence-based mental wellness technology">
+    <meta name="keywords" content="team, mental health technology, software developers, UX designers, Handong Global University, Korean startup">
+    <meta name="author" content="Nein to Sick Team - Handong Global University">
+    
+    <title>Our Team | Nein to Sick</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #7c3aed;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "💜";
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #7c3aed;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #7c3aed;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .team-hero {
+            margin-top: 80px;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #7c3aed 0%, #3730a3 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .team-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .team-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-content {
+            color: #6b7280;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Mission Statement */
+        .mission-statement {
+            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .mission-quote {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .mission-author {
+            color: #7c3aed;
+            font-weight: 500;
+        }
+
+        /* Team Composition */
+        .team-roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .role-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .role-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .role-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .role-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .role-description {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* University Connection */
+        .university-section {
+            background: linear-gradient(135deg, #1e3a8a, #3730a3);
+            color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .university-logo {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .university-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .university-description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Team Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .value-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #7c3aed;
+            transition: transform 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: translateX(5px);
+        }
+
+        .value-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-title {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-description {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        /* Team Photo Section */
+        .team-photo-section {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .team-photo-placeholder {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            background: linear-gradient(135deg, #7c3aed, #3730a3);
+            border-radius: 20px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.3);
+        }
+
+        /* Collaboration CTA */
+        .collaboration-cta {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-white {
+            background: white;
+            color: #f59e0b;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Timeline */
+        .journey-timeline {
+            margin: 2rem 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        .timeline-date {
+            background: #7c3aed;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #7c3aed;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-description {
+            color: #6b7280;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            color: #d1d5db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .team-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+
+            .team-roles {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .timeline-date {
+                align-self: flex-start;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Nein to Sick</a>
+            <ul class="nav-links">
+                <li><a href="research-methodology.html">Research</a></li>
+                <li><a href="team.html" class="active">Team</a></li>
+                <li><a href="bandi.html">Bandi App</a></li>
+                <li><a href="impact-data.html">Impact Data</a></li>
+                <li><a href="partnerships.html">Partnerships</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="team-hero">
+            <div class="container">
+                <h1>👥 Meet Our Team</h1>
+                <p>Mission-driven developers and designers passionate about creating accessible mental wellness technology</p>
+            </div>
+        </section>
+
+        <div class="container main-content">
+            <section class="mission-statement fade-in-up">
+                <div class="mission-quote">
+                    "We believe that everyone deserves access to mental wellness support. Our mission is to help people say 'no to sickness' through thoughtful, evidence-based technology."
+                </div>
+                <div class="mission-author">— The Nein to Sick Team</div>
+            </section>
+
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    🚀 Our Story
+                </h2>
+                <div class="section-content">
+                    <p>The Nein to Sick team was born from a shared concern about the rising rates of depression and psychological anxiety in South Korea, particularly among university students. As a group of passionate software developers and UX/UI designers at Handong Global University, we recognized that mental health is not just a local issue but a growing global concern.</p>
+                    
+                    <p>Our name combines the German word "Nein" (meaning "No") with "Sick" to represent our core mission: helping people say "no to sickness," with a special focus on mental and emotional well-being. We believe technology can be a powerful force for good when applied thoughtfully to mental health challenges.</p>
+                </div>
+            </section>
+
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    💼 Team Composition
+                </h2>
+                <div class="team-roles">
+                    <div class="role-card">
+                        <div class="role-icon">💻</div>
+                        <div class="role-title">Software Developers</div>
+                        <div class="role-description">Experienced in mobile app development, backend systems, and data analytics. Focused on creating robust, secure, and user-friendly applications for mental wellness.</div>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon">🎨</div>
+                        <div class="role-title">UX/UI Designers</div>
+                        <div class="role-description">Specialists in user experience design with deep understanding of accessibility and mental health considerations in digital interfaces.</div>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon">🔬</div>
+                        <div class="role-title">Research Team</div>
+                        <div class="role-description">Dedicated to evidence-based development through user research, expert interviews, and continuous validation with mental health professionals.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="university-section fade-in-up">
+                <div class="university-logo">🏛️</div>
+                <h2 class="university-title">Handong Global University</h2>
+                <div class="university-description">
+                    Our team is proudly based at Handong Global University, a Christian university located in Pohang, South Korea. This institution's commitment to global service and ethical innovation aligns perfectly with our mission to create technology that serves humanity's mental wellness needs. The university's international perspective and values-driven approach have shaped our vision to start locally in Korea while building for global impact.
+                </div>
+            </section>
+
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    🌟 Our Values
+                </h2>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">🎯</div>
+                        <div class="value-title">Evidence-Based Approach</div>
+                        <div class="value-description">Every decision is grounded in research and validated by mental health professionals</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">💙</div>
+                        <div class="value-title">Empathy-Driven Design</div>
+                        <div class="value-description">Deep understanding of user needs through extensive interviews and lived experiences</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🌍</div>
+                        <div class="value-title">Global Impact Vision</div>
+                        <div class="value-description">Starting local but thinking global to serve mental wellness needs worldwide</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🔒</div>
+                        <div class="value-title">Privacy & Safety First</div>
+                        <div class="value-description">Uncompromising commitment to user privacy and psychological safety</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🤝</div>
+                        <div class="value-title">Collaborative Spirit</div>
+                        <div class="value-description">Working closely with mental health professionals and the global research community</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">📈</div>
+                        <div class="value-title">Continuous Improvement</div>
+                        <div class="value-description">Iterative development based on user feedback and emerging best practices</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    📅 Our Journey
+                </h2>
+                <div class="journey-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Team Formation</div>
+                            <div class="timeline-description">Passionate developers and designers at Handong Global University unite around shared mission to address mental health challenges</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Early 2024</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Research Phase</div>
+                            <div class="timeline-description">Conducted 300+ in-depth interviews with mental health professionals and individuals with lived experience</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Mid 2024</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Bandi Development</div>
+                            <div class="timeline-description">Evidence-based development of the Bandi app with continuous expert validation and user testing</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Global Outreach</div>
+                            <div class="timeline-description">Sharing our research and seeking international partnerships to expand mental wellness technology globally</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team-photo-section fade-in-up">
+                <h3 style="font-size: 1.5rem; font-weight: 600; color: #1f2937; margin-bottom: 2rem;">Our Team</h3>
+                <div class="team-photo-placeholder">
+                    📸 Team Photo<br>Coming Soon
+                </div>
+            </section>
+
+            <section class="collaboration-cta fade-in-up">
+                <h2 class="cta-title">🤝 Let's Collaborate</h2>
+                <p class="cta-description">
+                    We're actively seeking partnerships with universities, research institutions, and mental health organizations worldwide. 
+                    Join us in making mental wellness technology accessible to everyone.
+                </p>
+                <a href="partnerships.html" class="btn btn-white">
+                    🌍 Explore Partnerships
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Nein to Sick Team. Handong Global University. Building technology with purpose and compassion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+
+        // Timeline animation
+        document.querySelectorAll('.timeline-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateX(-30px)';
+            item.style.transition = `opacity 0.6s ease ${index * 0.3}s, transform 0.6s ease ${index * 0.3}s`;
+            observer.observe(item);
+        });
+
+        // Role cards hover effect
+        document.querySelectorAll('.role-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.background = 'linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.background = 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research Methodology - Nein to Sick's evidence-based approach to mental wellness app development through 300+ expert interviews">
+    <meta name="keywords" content="research methodology, mental health research, user interviews, evidence-based design, counseling psychology">
+    <meta name="author" content="Nein to Sick Team - Handong Global University">
+    
+    <title>Research Methodology | Nein to Sick</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #7c3aed;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "💜";
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #7c3aed;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #7c3aed;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .research-hero {
+            margin-top: 80px;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #7c3aed 0%, #3730a3 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .research-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .research-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-content {
+            color: #6b7280;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Research Process Timeline */
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #7c3aed, #c4b5fd);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 80px;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #7c3aed;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #e0e7ff;
+        }
+
+        .timeline-content {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #7c3aed;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-description {
+            color: #6b7280;
+        }
+
+        /* Interview Breakdown */
+        .interview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .interview-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .interview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .interview-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .interview-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #7c3aed;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .interview-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .interview-description {
+            font-size: 0.95rem;
+            color: #6b7280;
+        }
+
+        /* Research Principles */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .principle-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #7c3aed;
+        }
+
+        .principle-title {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .principle-description {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        /* Validation Process */
+        .validation-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .validation-step {
+            background: linear-gradient(135deg, #7c3aed, #3730a3);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .step-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+
+        .step-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Download Section */
+        .download-section {
+            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .download-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: #7c3aed;
+            color: white;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #7c3aed;
+            border: 2px solid #7c3aed;
+        }
+
+        .btn-secondary:hover {
+            background: #7c3aed;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            color: #d1d5db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .research-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+
+            .timeline-item {
+                padding-left: 60px;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .interview-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Nein to Sick</a>
+            <ul class="nav-links">
+                <li><a href="research-methodology.html" class="active">Research</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="bandi.html">Bandi App</a></li>
+                <li><a href="impact-data.html">Impact Data</a></li>
+                <li><a href="partnerships.html">Partnerships</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="research-hero">
+            <div class="container">
+                <h1>🔬 Research Methodology</h1>
+                <p>Our evidence-based approach to developing mental wellness technology through rigorous research and expert validation</p>
+            </div>
+        </section>
+
+        <div class="container main-content">
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    🎯 Research Overview
+                </h2>
+                <div class="section-content">
+                    <p>The Nein to Sick team believes that effective mental wellness technology must be grounded in solid research and validated by mental health professionals. Our approach to developing the Bandi app was built on a foundation of over 300 in-depth interviews, continuous expert consultation, and iterative validation processes.</p>
+                    
+                    <p>This comprehensive research methodology ensures that every feature in the Bandi app is not only user-friendly but also psychologically sound and clinically relevant for our target audience of university students.</p>
+                </div>
+            </section>
+
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    👥 Interview Participants Breakdown
+                </h2>
+                <div class="interview-grid">
+                    <div class="interview-card">
+                        <div class="interview-icon">👩‍⚕️</div>
+                        <span class="interview-number">8</span>
+                        <div class="interview-label">Professional Counselors</div>
+                        <div class="interview-description">Licensed mental health professionals with expertise in counseling psychology and therapy practices</div>
+                    </div>
+                    <div class="interview-card">
+                        <div class="interview-icon">🎓</div>
+                        <span class="interview-number">3</span>
+                        <div class="interview-label">Graduate Students</div>
+                        <div class="interview-description">MA/Ph.D. students in counseling psychology programs with research and clinical experience</div>
+                    </div>
+                    <div class="interview-card">
+                        <div class="interview-icon">💙</div>
+                        <span class="interview-number">150</span>
+                        <div class="interview-label">Individuals with Lived Experience</div>
+                        <div class="interview-description">People who have received treatment for depression and anxiety, including medication and counseling</div>
+                    </div>
+                    <div class="interview-card">
+                        <div class="interview-icon">📊</div>
+                        <span class="interview-number">300+</span>
+                        <div class="interview-label">Total Interviews</div>
+                        <div class="interview-description">Comprehensive data collection ensuring diverse perspectives and robust validation</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    📋 Research Process Timeline
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Phase 1: Problem Identification</div>
+                            <div class="timeline-description">Initial research into mental health challenges facing university students in South Korea, identifying key pain points and unmet needs in current support systems.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Phase 2: Expert Consultation</div>
+                            <div class="timeline-description">In-depth interviews with 8 professional counselors and 3 graduate students to understand best practices in mental health support and digital intervention design.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Phase 3: User Experience Research</div>
+                            <div class="timeline-description">Comprehensive interviews with 150 individuals with lived experience of depression and anxiety treatment to understand user needs, preferences, and barriers.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Phase 4: Feature Development & Validation</div>
+                            <div class="timeline-description">Iterative design and testing of app features with continuous feedback from mental health professionals and target users.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Phase 5: Expert Review & Refinement</div>
+                            <div class="timeline-description">Final validation of the complete app experience by our panel of mental health experts to ensure clinical appropriateness and safety.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    🔬 Research Principles
+                </h2>
+                <div class="principles-grid">
+                    <div class="principle-item">
+                        <div class="principle-title">Evidence-Based Design</div>
+                        <div class="principle-description">Every feature is grounded in psychological research and validated therapeutic approaches</div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-title">User-Centered Approach</div>
+                        <div class="principle-description">Extensive user research ensures the app meets real needs and preferences of our target audience</div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-title">Expert Validation</div>
+                        <div class="principle-description">Continuous involvement of mental health professionals throughout the development process</div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-title">Ethical Considerations</div>
+                        <div class="principle-description">Careful attention to privacy, safety, and appropriate boundaries in digital mental health support</div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-title">Cultural Sensitivity</div>
+                        <div class="principle-description">Understanding of Korean cultural context while designing for potential global expansion</div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-title">Iterative Improvement</div>
+                        <div class="principle-description">Ongoing research and refinement based on user feedback and emerging best practices</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    ✅ Validation Process
+                </h2>
+                <div class="validation-steps">
+                    <div class="validation-step">
+                        <div class="step-number">01</div>
+                        <div class="step-title">Research Design</div>
+                        <div class="step-description">Methodology approved by academic advisors</div>
+                    </div>
+                    <div class="validation-step">
+                        <div class="step-number">02</div>
+                        <div class="step-title">Data Collection</div>
+                        <div class="step-description">Structured interviews with diverse participant groups</div>
+                    </div>
+                    <div class="validation-step">
+                        <div class="step-number">03</div>
+                        <div class="step-title">Analysis & Synthesis</div>
+                        <div class="step-description">Thematic analysis of interview data with expert review</div>
+                    </div>
+                    <div class="validation-step">
+                        <div class="step-number">04</div>
+                        <div class="step-title">Feature Validation</div>
+                        <div class="step-description">Expert review of proposed app features and algorithms</div>
+                    </div>
+                    <div class="validation-step">
+                        <div class="step-number">05</div>
+                        <div class="step-title">Continuous Mentorship</div>
+                        <div class="step-description">Ongoing guidance from mental health professionals</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="download-section fade-in-up">
+                <h3 class="download-title">📋 Research Documentation</h3>
+                <p style="color: #6b7280; margin-bottom: 1.5rem;">Access detailed documentation of our research methodology and findings</p>
+                <div class="download-buttons">
+                    <a href="#" class="btn btn-primary">
+                        📄 Download Research Summary
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        📊 View Interview Data
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        🔬 Methodology Details
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Nein to Sick Team. Handong Global University. Research conducted with ethical approval and participant consent.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+
+        // Timeline animation
+        document.querySelectorAll('.timeline-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateX(-30px)';
+            item.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>

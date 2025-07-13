@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nein to Sick - Evidence-based mental wellness technology from Handong Global University. Developing the Bandi app for emotion management through rigorous research.">
+    <meta name="keywords" content="mental wellness, emotion management, Bandi app, evidence-based design, mental health technology, Handong Global University">
+    <meta name="author" content="Nein to Sick Team, Handong Global University">
+    
+    <title>Nein to Sick | Evidence-Based Mental Wellness Technology</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "🌱";
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #2563eb;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            color: #e0e7ff;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #ffffff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .research-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 500;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #2563eb;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #6b7280;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .mission-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .mission-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Research Validation */
+        .research-validation {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+            color: white;
+        }
+
+        .validation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .validation-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .validation-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #60a5fa;
+            display: block;
+        }
+
+        .validation-label {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        .validation-description {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 0.5rem;
+        }
+
+        /* Bandi Showcase */
+        .bandi-showcase {
+            padding: 6rem 0;
+            background: #f9fafb;
+        }
+
+        .showcase-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .showcase-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .showcase-text p {
+            font-size: 1.1rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .showcase-visual {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            color: white;
+        }
+
+        .phone-mockup {
+            font-size: 8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* University Badge */
+        .university-section {
+            padding: 4rem 0;
+            background: white;
+            text-align: center;
+        }
+
+        .university-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 1.5rem 3rem;
+            border-radius: 15px;
+            border: 2px solid #e5e7eb;
+        }
+
+        .university-logo {
+            font-size: 2.5rem;
+        }
+
+        .university-text h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .university-text p {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #60a5fa;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: #60a5fa;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 1rem;
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mission-grid, .validation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .showcase-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .university-badge {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Nein to Sick</a>
+            <ul class="nav-links">
+                <li><a href="research-methodology.html">Research</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="bandi.html">Bandi App</a></li>
+                <li><a href="impact-data.html">Impact</a></li>
+                <li><a href="partnerships.html">Partnerships</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-in-up">
+                    <div class="hero-subtitle">From Handong Global University, South Korea</div>
+                    <h1>Say "Nein" to Mental Sickness</h1>
+                    <p class="subtitle">
+                        Evidence-based mental wellness technology developed through rigorous research. 
+                        Our mission-driven team creates accessible IT solutions that empower individuals 
+                        to manage and improve their mental well-being.
+                    </p>
+                    <div class="research-badge">
+                        📊 Built on 300+ In-Depth Research Interviews
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="bandi.html" class="btn btn-primary">
+                            📱 Discover Bandi App
+                        </a>
+                        <a href="research-methodology.html" class="btn btn-secondary">
+                            🔬 View Research
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission">
+            <div class="container">
+                <h2 class="section-title">Our Mission & Vision</h2>
+                <p class="section-subtitle">
+                    Inspired by South Korea's mental health challenges, we're building solutions for global impact
+                </p>
+                <div class="mission-grid">
+                    <div class="mission-card fade-in-up">
+                        <div class="mission-icon">🎯</div>
+                        <h3>Evidence-Based Approach</h3>
+                        <p>Every feature in our applications is developed through extensive research, expert validation, and user-centered design principles.</p>
+                    </div>
+                    <div class="mission-card fade-in-up">
+                        <div class="mission-icon">🌍</div>
+                        <h3>Global Mental Wellness</h3>
+                        <p>Starting in Korea and expanding worldwide, we make mental self-care a normal part of daily life for everyone.</p>
+                    </div>
+                    <div class="mission-card fade-in-up">
+                        <div class="mission-icon">💡</div>
+                        <h3>Accessible Technology</h3>
+                        <p>Creating intuitive mobile applications that democratize access to mental health tools and professional-grade wellness resources.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="research-validation">
+            <div class="container">
+                <h2 class="section-title">Research Validation</h2>
+                <p class="section-subtitle">
+                    Our credibility is built on rigorous research methodology and expert validation
+                </p>
+                <div class="validation-grid">
+                    <div class="validation-item">
+                        <span class="validation-number">300+</span>
+                        <div class="validation-label">In-Depth Interviews</div>
+                        <div class="validation-description">Comprehensive user research foundation</div>
+                    </div>
+                    <div class="validation-item">
+                        <span class="validation-number">8</span>
+                        <div class="validation-label">Professional Counselors</div>
+                        <div class="validation-description">Expert validation and mentorship</div>
+                    </div>
+                    <div class="validation-item">
+                        <span class="validation-number">150</span>
+                        <div class="validation-label">Treatment Experienced</div>
+                        <div class="validation-description">Users with lived experience</div>
+                    </div>
+                    <div class="validation-item">
+                        <span class="validation-number">3</span>
+                        <div class="validation-label">Graduate Researchers</div>
+                        <div class="validation-description">MA/PhD in counseling psychology</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bandi-showcase">
+            <div class="container">
+                <div class="showcase-content">
+                    <div class="showcase-text">
+                        <h2>Introducing Bandi</h2>
+                        <p>
+                            Our flagship mobile application for daily emotion management, designed specifically 
+                            for university students in their 20s. Bandi combines psychology-based algorithms 
+                            with user-friendly design to make mental wellness accessible and engaging.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Simple emotion logging interface</li>
+                            <li>Data-driven daily and weekly reports</li>
+                            <li>Personalized comfort messages</li>
+                            <li>Expert-written wellness content</li>
+                        </ul>
+                        <a href="bandi.html" class="btn btn-primary">Learn More About Bandi</a>
+                    </div>
+                    <div class="showcase-visual">
+                        <div class="phone-mockup">📱</div>
+                        <h3>Daily Emotion Management</h3>
+                        <p>Empowering users to understand and manage their mental wellness through data-driven insights</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="university-section">
+            <div class="container">
+                <div class="university-badge">
+                    <div class="university-logo">🏛️</div>
+                    <div class="university-text">
+                        <h3>Handong Global University</h3>
+                        <p>Christian University • Pohang, South Korea • Tech for Good Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Research Team</h4>
+                    <p>Mission-driven software developers and UX/UI designers committed to evidence-based mental wellness solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Partnership Opportunities</h4>
+                    <p>Open to collaboration with universities, research institutions, and mental health organizations worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p>📧 team@neintosick.org<br>
+                    🏫 Handong Global University<br>
+                    📍 Pohang, South Korea<br>
+                    🔗 <a href="contact.html">Get in Touch</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nein to Sick Team, Handong Global University. All rights reserved. | Mental Wellness • Evidence-Based • Global Impact</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.mission-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Language toggle functionality placeholder
+        function toggleLanguage() {
+            console.log('Language toggle between English and Korean');
+        }
+    </script>
+</body>
+</html>

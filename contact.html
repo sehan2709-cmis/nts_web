@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Nein to Sick - Get in touch for partnerships, research collaboration, or questions about our evidence-based mental wellness technology">
+    <meta name="keywords" content="contact, email, collaboration, partnerships, research inquiries, mental health technology">
+    <meta name="author" content="Nein to Sick Team - Handong Global University">
+    
+    <title>Contact Us | Nein to Sick</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #7c3aed;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "💜";
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #7c3aed;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #7c3aed;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .contact-hero {
+            margin-top: 80px;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #7c3aed 0%, #3730a3 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .contact-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Contact Options */
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .contact-option {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #7c3aed, #3730a3);
+        }
+
+        .contact-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .contact-description {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            list-style: none;
+            text-align: left;
+        }
+
+        .contact-details li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .contact-cta {
+            background: #7c3aed;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .contact-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .form-info h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .form-info p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .form-features {
+            list-style: none;
+        }
+
+        .form-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+            color: #374151;
+        }
+
+        .form-features li::before {
+            content: "✅";
+            font-size: 1rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .submit-btn {
+            background: #7c3aed;
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Location Section */
+        .location-section {
+            background: linear-gradient(135deg, #1e3a8a, #3730a3);
+            color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .location-info h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-info p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .location-details {
+            list-style: none;
+        }
+
+        .location-details li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .location-map {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .map-placeholder {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .map-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .map-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #7c3aed;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: #6b7280;
+            line-height: 1.6;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            margin-bottom: 1rem;
+        }
+
+        .faq-toggle {
+            background: #e0e7ff;
+            color: #7c3aed;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            background: #7c3aed;
+            color: white;
+            transform: rotate(45deg);
+        }
+
+        /* Response Time */
+        .response-section {
+            background: linear-gradient(135deg, #059669, #047857);
+            color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .response-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .response-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .response-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .response-time {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .response-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .response-detail {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            color: #d1d5db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .contact-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+
+            .contact-options {
+                grid-template-columns: 1fr;
+            }
+
+            .form-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .location-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .contact-option:hover .contact-icon {
+            animation: pulse 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Nein to Sick</a>
+            <ul class="nav-links">
+                <li><a href="research-methodology.html">Research</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="bandi.html">Bandi App</a></li>
+                <li><a href="impact-data.html">Impact Data</a></li>
+                <li><a href="partnerships.html">Partnerships</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1>📧 Get in Touch</h1>
+                <p>Ready to collaborate on evidence-based mental wellness technology? We'd love to hear from you and explore opportunities for partnership and research collaboration.</p>
+            </div>
+        </section>
+
+        <div class="container main-content">
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    🤝 Let's Connect
+                </h2>
+                <div class="contact-options">
+                    <div class="contact-option">
+                        <div class="contact-icon">🎓</div>
+                        <h3 class="contact-title">Research Partnerships</h3>
+                        <p class="contact-description">
+                            Interested in academic collaboration, joint research projects, or co-authoring publications on digital mental health?
+                        </p>
+                        <ul class="contact-details">
+                            <li>📧 research@neintosick.org</li>
+                            <li>🎯 Academic collaborations</li>
+                            <li>📊 Joint research projects</li>
+                            <li>📝 Co-authoring opportunities</li>
+                        </ul>
+                        <a href="mailto:research@neintosick.org" class="contact-cta">
+                            📨 Contact Research Team
+                        </a>
+                    </div>
+
+                    <div class="contact-option">
+                        <div class="contact-icon">🌍</div>
+                        <h3 class="contact-title">Partnership Opportunities</h3>
+                        <p class="contact-description">
+                            Looking to partner with us on international expansion, clinical validation, or technology development?
+                        </p>
+                        <ul class="contact-details">
+                            <li>📧 partnerships@neintosick.org</li>
+                            <li>🤝 Strategic partnerships</li>
+                            <li>🌐 International expansion</li>
+                            <li>💻 Technology collaboration</li>
+                        </ul>
+                        <a href="mailto:partnerships@neintosick.org" class="contact-cta">
+                            🤝 Discuss Partnership
+                        </a>
+                    </div>
+
+                    <div class="contact-option">
+                        <div class="contact-icon">💬</div>
+                        <h3 class="contact-title">General Inquiries</h3>
+                        <p class="contact-description">
+                            Have questions about our work, media inquiries, or just want to learn more about our mission?
+                        </p>
+                        <ul class="contact-details">
+                            <li>📧 hello@neintosick.org</li>
+                            <li>❓ General questions</li>
+                            <li>📰 Media inquiries</li>
+                            <li>💡 Feedback & suggestions</li>
+                        </ul>
+                        <a href="mailto:hello@neintosick.org" class="contact-cta">
+                            💬 Send Message
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-form-section fade-in-up">
+                <h2 class="section-title">
+                    📝 Send Us a Message
+                </h2>
+                <div class="form-container">
+                    <div class="form-info">
+                        <h3>We're Here to Help</h3>
+                        <p>
+                            Whether you're interested in research collaboration, partnership opportunities, or have questions about our work, we'd love to hear from you. Fill out the form and we'll get back to you within 48 hours.
+                        </p>
+                        <ul class="form-features">
+                            <li>Response within 48 hours</li>
+                            <li>Direct access to team members</li>
+                            <li>Detailed project discussions</li>
+                            <li>Flexible meeting scheduling</li>
+                            <li>International collaboration welcome</li>
+                        </ul>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="organization">Organization/Institution</label>
+                                <input type="text" id="organization" name="organization">
+                            </div>
+                            <div class="form-group">
+                                <label for="role">Your Role</label>
+                                <select id="role" name="role">
+                                    <option value="">Select your role</option>
+                                    <option value="professor">Professor/Researcher</option>
+                                    <option value="administrator">University Administrator</option>
+                                    <option value="clinician">Mental Health Professional</option>
+                                    <option value="student">Graduate Student</option>
+                                    <option value="industry">Industry Professional</option>
+                                    <option value="journalist">Journalist/Media</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="inquiryType">Type of Inquiry *</label>
+                            <select id="inquiryType" name="inquiryType" required>
+                                <option value="">Select inquiry type</option>
+                                <option value="research">Research Collaboration</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="academic">Academic Question</option>
+                                <option value="student">Student Interest</option>
+                                <option value="feedback">Feedback/Suggestion</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" placeholder="Brief description of your inquiry" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Please provide details about your inquiry, including any specific questions, collaboration interests, or how we can help you..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            🚀 Send Message
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="location-section fade-in-up">
+                <div class="location-content">
+                    <div class="location-info">
+                        <h3>🏛️ Our Location</h3>
+                        <p>
+                            Based at Handong Global University in Pohang, South Korea, we're at the heart of innovative education and research. Our Christian university setting provides a values-driven environment that aligns with our mission to serve global mental wellness needs.
+                        </p>
+                        <ul class="location-details">
+                            <li>🏫 Handong Global University</li>
+                            <li>📍 Pohang, Gyeongsangbuk-do, South Korea</li>
+                            <li>🌏 Global research collaboration hub</li>
+                            <li>💻 Virtual meetings worldwide</li>
+                            <li>🕐 KST (UTC+9) timezone</li>
+                        </ul>
+                    </div>
+                    <div class="location-map">
+                        <div class="map-placeholder">🗺️</div>
+                        <h4 class="map-title">Handong Global University</h4>
+                        <p class="map-description">
+                            Located on Korea's eastern coast, providing an inspiring environment for innovation and international collaboration
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="response-section fade-in-up">
+                <h2 class="section-title" style="color: white;">
+                    ⏱️ Our Response Commitment
+                </h2>
+                <div class="response-grid">
+                    <div class="response-item">
+                        <div class="response-icon">📧</div>
+                        <div class="response-time">< 48hrs</div>
+                        <div class="response-label">Email Response</div>
+                        <div class="response-detail">Initial response to all inquiries</div>
+                    </div>
+                    <div class="response-item">
+                        <div class="response-icon">📞</div>
+                        <div class="response-time">1 Week</div>
+                        <div class="response-label">Detailed Discussion</div>
+                        <div class="response-detail">For partnership & research inquiries</div>
+                    </div>
+                    <div class="response-item">
+                        <div class="response-icon">🤝</div>
+                        <div class="response-time">Flexible</div>
+                        <div class="response-label">Meeting Schedule</div>
+                        <div class="response-detail">International timezone accommodation</div>
+                    </div>
+                    <div class="response-item">
+                        <div class="response-icon">🌍</div>
+                        <div class="response-time">24/7</div>
+                        <div class="response-label">Global Availability</div>
+                        <div class="response-detail">Supporting worldwide collaboration</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq-section fade-in-up">
+                <h2 class="section-title">
+                    ❓ Frequently Asked Questions
+                </h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How can I collaborate with your research team?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We welcome research collaborations with academic institutions, mental health organizations, and individual researchers. Contact us at research@neintosick.org with details about your research interests and proposed collaboration areas. We're particularly interested in cross-cultural studies, validation research, and longitudinal outcome studies.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Are you open to international partnerships?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Absolutely! We actively seek international partnerships for global expansion, cultural adaptation research, and cross-border mental health technology development. Our vision is to serve university students worldwide, and international partnerships are essential to achieving this goal.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I access your research data or publications?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Our research findings are being prepared for publication in peer-reviewed journals and conference proceedings. Once published, our work will be freely accessible. For collaboration purposes, we can share appropriate datasets and methodologies under proper research agreements.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How can students get involved with your project?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We welcome student involvement through research internships, thesis projects, and collaborative studies. Graduate students in psychology, computer science, and related fields can contact us to discuss potential opportunities for involvement in our research and development activities.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What makes your approach different from other mental health apps?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Our approach is distinguished by extensive evidence-based development (300+ expert interviews), continuous validation by mental health professionals, and specific focus on university students aged 20+. We prioritize clinical appropriateness, cultural sensitivity, and measurable outcomes over generic wellness features.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            When will the Bandi app be available for download?
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We're currently in the final development and testing phase. Beta testing with Korean university students will begin in Q1 2025, with broader availability planned for Q3-Q4 2025. International expansion timeline depends on partnership development and cultural adaptation research.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Nein to Sick Team. Handong Global University. We're here to connect, collaborate, and create positive change together.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+
+        // Contact option hover effects
+        document.querySelectorAll('.contact-option').forEach(option => {
+            option.addEventListener('mouseenter', () => {
+                option.style.background = 'linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%)';
+            });
+            
+            option.addEventListener('mouseleave', () => {
+                option.style.background = 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)';
+            });
+        });
+
+        // Form validation and submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Validate required fields
+            const requiredFields = ['firstName', 'lastName', 'email', 'inquiryType', 'subject', 'message'];
+            let isValid = true;
+            let firstInvalidField = null;
+            
+            requiredFields.forEach(field => {
+                const input = document.getElementById(field);
+                if (!data[field] || data[field].trim() === '') {
+                    input.style.borderColor = '#ef4444';
+                    input.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.1)';
+                    isValid = false;
+                    if (!firstInvalidField) firstInvalidField = input;
+                } else {
+                    input.style.borderColor = '#10b981';
+                    input.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1)';
+                }
+            });
+            
+            // Email validation
+            const emailInput = document.getElementById('email');
+            if (data.email && !isValidEmail(data.email)) {
+                emailInput.style.borderColor = '#ef4444';
+                emailInput.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.1)';
+                isValid = false;
+                if (!firstInvalidField) firstInvalidField = emailInput;
+            }
+            
+            if (isValid) {
+                // Simulate form submission
+                const submitButton = contactForm.querySelector('.submit-btn');
+                const originalText = submitButton.textContent;
+                
+                submitButton.textContent = '📤 Sending Message...';
+                submitButton.disabled = true;
+                
+                setTimeout(() => {
+                    submitButton.textContent = '✅ Message Sent Successfully!';
+                    submitButton.style.background = '#10b981';
+                    
+                    // Show success notification
+                    showNotification('Thank you! Your message has been sent successfully. We\'ll respond within 48 hours.', 'success');
+                    
+                    // Reset form after delay
+                    setTimeout(() => {
+                        contactForm.reset();
+                        submitButton.textContent = originalText;
+                        submitButton.style.background = '#7c3aed';
+                        submitButton.disabled = false;
+                        
+                        // Reset border colors
+                        requiredFields.forEach(field => {
+                            const input = document.getElementById(field);
+                            input.style.borderColor = '#e5e7eb';
+                            input.style.boxShadow = 'none';
+                        });
+                    }, 4000);
+                }, 2000);
+                
+                console.log('Contact form submitted:', data);
+            } else {
+                // Show validation error
+                const submitButton = contactForm.querySelector('.submit-btn');
+                const originalText = submitButton.textContent;
+                
+                submitButton.textContent = '❌ Please complete required fields';
+                submitButton.style.background = '#ef4444';
+                
+                // Scroll to first invalid field
+                if (firstInvalidField) {
+                    firstInvalidField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    firstInvalidField.focus();
+                }
+                
+                showNotification('Please complete all required fields correctly.', 'error');
+                
+                setTimeout(() => {
+                    submitButton.textContent = originalText;
+                    submitButton.style.background = '#7c3aed';
+                }, 3000);
+            }
+        });
+
+        // Email validation helper
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Form field interactions
+        document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(field => {
+            field.addEventListener('focus', () => {
+                field.style.borderColor = '#7c3aed';
+                field.style.boxShadow = '0 0 0 3px rgba(124, 58, 237, 0.1)';
+            });
+            
+            field.addEventListener('blur', () => {
+                if (field.hasAttribute('required') && field.value.trim() !== '') {
+                    field.style.borderColor = '#10b981';
+                    field.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1)';
+                } else if (!field.hasAttribute('required') || field.value.trim() === '') {
+                    field.style.borderColor = '#e5e7eb';
+                    field.style.boxShadow = 'none';
+                }
+            });
+            
+            // Real-time validation for email
+            if (field.type === 'email') {
+                field.addEventListener('input', () => {
+                    if (field.value && !isValidEmail(field.value)) {
+                        field.style.borderColor = '#f59e0b';
+                        field.style.boxShadow = '0 0 0 3px rgba(245, 158, 11, 0.1)';
+                    } else if (field.value && isValidEmail(field.value)) {
+                        field.style.borderColor = '#10b981';
+                        field.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1)';
+                    }
+                });
+            }
+        });
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't already active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Contact CTA button interactions
+        document.querySelectorAll('.contact-cta').forEach(button => {
+            button.addEventListener('click', (e) => {
+                if (button.getAttribute('href').startsWith('mailto:')) {
+                    // Let the default mailto action happen
+                    showNotification('Opening your email client...', 'info');
+                } else {
+                    e.preventDefault();
+                    showNotification('Email functionality would open here.', 'info');
+                }
+            });
+        });
+
+        // Map interaction
+        const mapPlaceholder = document.querySelector('.map-placeholder');
+        if (mapPlaceholder) {
+            mapPlaceholder.addEventListener('click', () => {
+                mapPlaceholder.style.transform = 'scale(1.1)';
+                mapPlaceholder.textContent = '📍';
+                
+                setTimeout(() => {
+                    mapPlaceholder.style.transform = 'scale(1)';
+                    mapPlaceholder.textContent = '🗺️';
+                }, 1000);
+                
+                showNotification('Interactive map would open here with detailed location information.', 'info');
+            });
+        }
+
+        // Notification system
+        function showNotification(message, type = 'info') {
+            // Remove existing notification if any
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+
+            // Set colors based on type
+            let backgroundColor, borderColor;
+            switch(type) {
+                case 'success':
+                    backgroundColor = '#10b981';
+                    borderColor = '#059669';
+                    break;
+                case 'error':
+                    backgroundColor = '#ef4444';
+                    borderColor = '#dc2626';
+                    break;
+                case 'warning':
+                    backgroundColor = '#f59e0b';
+                    borderColor = '#d97706';
+                    break;
+                default:
+                    backgroundColor = '#7c3aed';
+                    borderColor = '#6d28d9';
+            }
+
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: ${backgroundColor};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 10px;
+                border-left: 4px solid ${borderColor};
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+                z-index: 1001;
+                max-width: 350px;
+                font-size: 0.9rem;
+                line-height: 1.4;
+                opacity: 0;
+                transform: translateX(100%);
+                transition: all 0.3s ease;
+            `;
+            notification.textContent = message;
+
+            document.body.appendChild(notification);
+
+            // Animate in
+            setTimeout(() => {
+                notification.style.opacity = '1';
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+
+            // Remove after 5 seconds
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 300);
+            }, 5000);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Dynamic form field suggestions based on inquiry type
+        const inquiryTypeSelect = document.getElementById('inquiryType');
+        const messageTextarea = document.getElementById('message');
+        
+        if (inquiryTypeSelect && messageTextarea) {
+            inquiryTypeSelect.addEventListener('change', (e) => {
+                const selectedValue = e.target.value;
+                let placeholder = "Please provide details about your inquiry, including any specific questions, collaboration interests, or how we can help you...";
+                
+                switch(selectedValue) {
+                    case 'research':
+                        placeholder = "Please describe your research interests, current projects, institution, and how you envision collaborating with our team. Include any specific areas of digital mental health or methodological approaches you'd like to explore together.";
+                        break;
+                    case 'partnership':
+                        placeholder = "Tell us about your organization, the type of partnership you're interested in (academic, clinical, international expansion, technology), and your vision for collaboration. Include any specific goals or outcomes you hope to achieve.";
+                        break;
+                    case 'media':
+                        placeholder = "Please provide details about your publication/media outlet, the story you're working on, your deadline, and specific aspects of our work you'd like to discuss. Include any particular team members you'd like to interview.";
+                        break;
+                    case 'academic':
+                        placeholder = "Please describe your academic question, whether it's about our research methodology, findings, publications, or specific aspects of our evidence-based approach to mental wellness technology development.";
+                        break;
+                    case 'student':
+                        placeholder = "Tell us about your academic background, current studies, specific interests in mental health technology, and how you'd like to get involved (research assistance, thesis project, internship, etc.).";
+                        break;
+                }
+                
+                messageTextarea.placeholder = placeholder;
+            });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add loading animation
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+
+            // Show welcome notification after page loads
+            setTimeout(() => {
+                showNotification('Welcome! We\'re excited to hear from you and explore collaboration opportunities.', 'info');
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

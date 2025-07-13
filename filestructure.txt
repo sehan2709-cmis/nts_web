@@ -1,0 +1,34 @@
+각각 파일들을 차례대로 만들어달라고 요청할게. 일단 research-methodology.html 만들어줘
+
+Nein-to-Sick-Website/
+├── 📄 index.html (메인 페이지)
+├── 📄 research-methodology.html (연구 방법론 & 검증 과정) ← 새로 추가
+├── 📄 team.html (about.html 개명)
+├── 📄 bandi.html (Bandi 앱 소개)
+├── 📄 impact-data.html (임팩트 데이터 & 결과) ← 새로 추가
+├── 📄 partnerships.html (협력 기회 & 파트너십) ← 새로 추가
+├── 📄 publications.html (발표 & 출간물) ← 새로 추가
+├── 📄 news.html (소식 & 업데이트)
+└── 📄 contact.html (문의)
+│
+├── 📁 css/
+│   └── 📄 style.css
+├── 📁 js/
+│   └── 📄 main.js
+└── 📁 assets/
+    ├── 📁 images/
+    │   ├── 🖼️ logo.png
+    │   ├── 🖼️ bandi_mockup.jpg
+    │   ├── 🖼️ team_photo.jpg
+    │   ├── 🖼️ handong_university.jpg ← 새로 추가
+    │   ├── 🖼️ research_process.png ← 새로 추가
+    │   └── 🖼️ interview_insights.jpg ← 새로 추가
+    ├── 📁 documents/
+    │   ├── 📄 research_methodology.pdf ← 새로 추가
+    │   ├── 📄 interview_summary.pdf ← 새로 추가
+    │   ├── 📄 expert_validation.pdf ← 새로 추가
+    │   └── 📄 user_testimonials.pdf ← 새로 추가
+    ├── 📁 data/
+    │   ├── 📄 interview_statistics.json ← 새로 추가
+    │   └── 📄 user_feedback_data.json ← 새로 추가
+    └── 📁 fonts/

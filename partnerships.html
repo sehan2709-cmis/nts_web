@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Partnership Opportunities - Collaborate with Nein to Sick on evidence-based mental wellness technology research and global expansion">
+    <meta name="keywords" content="partnerships, collaboration, mental health research, university partnerships, international cooperation, research opportunities">
+    <meta name="author" content="Nein to Sick Team - Handong Global University">
+    
+    <title>Partnership Opportunities | Nein to Sick</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #7c3aed;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "💜";
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #7c3aed;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #7c3aed;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .partnerships-hero {
+            margin-top: 80px;
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partnerships-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .partnerships-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #ffffff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .partnerships-hero .subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #c4b5fd;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-content {
+            color: #6b7280;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Partnership Types */
+        .partnership-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .partnership-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partnership-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #7c3aed, #3730a3);
+        }
+
+        .partnership-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .partnership-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .partnership-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .partnership-description {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .partnership-benefits {
+            list-style: none;
+        }
+
+        .partnership-benefits li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0.5rem;
+            color: #374151;
+            font-size: 0.95rem;
+        }
+
+        .partnership-benefits li::before {
+            content: "✅";
+            font-size: 1rem;
+        }
+
+        /* Collaboration Areas */
+        .collaboration-areas {
+            background: linear-gradient(135deg, #1e3a8a, #3730a3);
+            color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .area-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .area-item:hover {
+            transform: scale(1.05);
+        }
+
+        .area-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .area-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .area-description {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* Success Stories */
+        .success-stories {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .story-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #7c3aed;
+        }
+
+        .story-institution {
+            font-weight: 700;
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+
+        .story-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .story-description {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Application Process */
+        .application-process {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .process-step {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            color: #f59e0b;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .step-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .step-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .form-info h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .form-info p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            list-style: none;
+        }
+
+        .contact-details li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+            color: #374151;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #7c3aed;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: #7c3aed;
+            color: white;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #7c3aed;
+            border: 2px solid #7c3aed;
+        }
+
+        .btn-secondary:hover {
+            background: #7c3aed;
+            color: white;
+        }
+
+        /* Global Impact Vision */
+        .global-impact {
+            background: linear-gradient(135deg, #059669, #047857);
+            color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .impact-vision {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .impact-vision h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .impact-vision p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .world-map {
+            font-size: 8rem;
+            margin: 2rem 0;
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            color: #d1d5db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .partnerships-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+
+            .partnership-types {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .partnership-card:hover .partnership-icon {
+            animation: pulse 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Nein to Sick</a>
+            <ul class="nav-links">
+                <li><a href="research-methodology.html">Research</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="bandi.html">Bandi App</a></li>
+                <li><a href="impact-data.html">Impact Data</a></li>
+                <li><a href="partnerships.html" class="active">Partnerships</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="partnerships-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>🤝 Partnership Opportunities</h1>
+                    <p class="subtitle">
+                        Join us in advancing evidence-based mental wellness technology. 
+                        Together, we can make mental health support accessible to university students worldwide.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">Global</span>
+                            <span class="hero-stat-label">Research Vision</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">Open</span>
+                            <span class="hero-stat-label">Collaboration</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">Evidence</span>
+                            <span class="hero-stat-label">Based Approach</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">Impact</span>
+                            <span class="hero-stat-label">Focused</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container main-content">
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    🌍 Why Partner with Us?
+                </h2>
+                <div class="section-content">
+                    <p>Nein to Sick represents a unique opportunity to collaborate on evidence-based mental wellness technology that addresses one of the most pressing challenges facing young adults today. Our rigorous research methodology, validated by mental health professionals, and our commitment to global impact make us an ideal partner for institutions seeking to make a meaningful difference in student mental health.</p>
+                    
+                    <p>With over 300 expert interviews completed and a solid foundation in both technology and psychology, we offer partners the opportunity to participate in groundbreaking research while contributing to the development of solutions that can scale globally. Our approach combines academic rigor with practical implementation, ensuring that partnerships result in both scholarly contributions and real-world impact.</p>
+                </div>
+            </section>
+
+            <section class="content-section fade-in-up">
+                <h2 class="section-title">
+                    🎯 Partnership Types
+                </h2>
+                <div class="partnership-types">
+                    <div class="partnership-card">
+                        <div class="partnership-icon">🏛️</div>
+                        <h3 class="partnership-title">Academic Research Partnerships</h3>
+                        <p class="partnership-description">
+                            Collaborate with universities and research institutions on joint studies, publications, and grant applications focused on digital mental health interventions.
+                        </p>
+                        <ul class="partnership-benefits">
+                            <li>Co-authored research publications</li>
+                            <li>Joint grant applications</li>
+                            <li>Shared datasets and methodologies</li>
+                            <li>Cross-cultural validation studies</li>
+                            <li>Graduate student exchange programs</li>
+                        </ul>
+                    </div>
+                    <div class="partnership-card">
+                        <div class="partnership-icon">👩‍⚕️</div>
+                        <h3 class="partnership-title">Clinical Validation Partnerships</h3>
+                        <p class="partnership-description">
+                            Work with mental health organizations and clinics to validate our approaches and ensure clinical appropriateness across different populations.
+                        </p>
+                        <ul class="partnership-benefits">
+                            <li>Clinical efficacy studies</li>
+                            <li>Professional endorsement</li>
+                            <li>Real-world validation data</li>
+                            <li>Expert advisory board participation</li>
+                            <li>Evidence-based refinement</li>
+                        </ul>
+                    </div>
+                    <div class="partnership-card">
+                        <div class="partnership-icon">🌐</div>
+                        <h3 class="partnership-title">International Expansion</h3>
+                        <p class="partnership-description">
+                            Partner with global institutions to adapt and implement our solutions across different cultures and educational systems.
+                        </p>
+                        <ul class="partnership-benefits">
+                            <li>Cultural adaptation research</li>
+                            <li>Localization expertise</li>
+                            <li>Multi-country pilot programs</li>
+                            <li>Regulatory guidance</li>
+                            <li>Local implementation support</li>
+                        </ul>
+                    </div>
+                    <div class="partnership-card">
+                        <div class="partnership-icon">💻</div>
+                        <h3 class="partnership-title">Technology Development</h3>
+                        <p class="partnership-description">
+                            Collaborate on technical innovation, data analysis, and platform development to enhance our mental wellness solutions.
+                        </p>
+                        <ul class="partnership-benefits">
+                            <li>Technical co-development</li>
+                            <li>AI/ML research collaboration</li>
+                            <li>Data analytics partnerships</li>
+                            <li>Platform integration</li>
+                            <li>Innovation lab access</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="collaboration-areas fade-in-up">
+                <h2 class="section-title" style="color: white;">
+                    🔬 Key Collaboration Areas
+                </h2>
+                <div class="areas-grid">
+                    <div class="area-item">
+                        <div class="area-icon">📊</div>
+                        <h3 class="area-title">Cross-Cultural Research</h3>
+                        <p class="area-description">Study how mental wellness approaches vary across cultures and develop culturally sensitive interventions</p>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-icon">🧠</div>
+                        <h3 class="area-title">Psychology & Technology</h3>
+                        <p class="area-description">Bridge the gap between psychological research and practical technology implementation</p>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-icon">📱</div>
+                        <h3 class="area-title">Digital Health Innovation</h3>
+                        <p class="area-description">Advance the field of digital mental health through innovative app features and methodologies</p>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-icon">📈</div>
+                        <h3 class="area-title">Impact Measurement</h3>
+                        <p class="area-description">Develop comprehensive frameworks for measuring mental wellness intervention effectiveness</p>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-icon">🎓</div>
+                        <h3 class="area-title">Student Wellness Programs</h3>
+                        <p class="area-description">Create campus-wide mental wellness initiatives integrated with our technology solutions</p>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-icon">🔒</div>
+                        <h3 class="area-title">Privacy & Ethics</h3>
+                        <p class="area-description">Establish best practices for privacy and ethical considerations in mental health technology</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="success-stories fade-in-up">
+                <h2 class="section-title">
+                    ⭐ Partnership Vision
+                </h2>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <div class="story-institution">Handong Global University</div>
+                        <h3 class="story-title">Home Institution Support</h3>
+                        <p class="story-description">
+                            Our base institution provides foundational support, research facilities, and academic oversight for all our partnership initiatives.
+                        </p>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-institution">Mental Health Professionals</div>
+                        <h3 class="story-title">Clinical Advisory Network</h3>
+                        <p class="story-description">
+                            Established relationships with 8 professional counselors and 3 graduate students provide ongoing validation and guidance.
+                        </p>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-institution">User Community</div>
+                        <h3 class="story-title">Evidence-Based Development</h3>
+                        <p class="story-description">
+                            Our 300+ interview participants represent the foundation of our user-centered approach and continue to inform our development.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="application-process fade-in-up">
+                <h2 class="section-title" style="color: white;">
+                    📋 Partnership Process
+                </h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Initial Contact</h3>
+                        <p class="step-description">Reach out with your partnership interests and institutional background</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Alignment Discussion</h3>
+                        <p class="step-description">Discuss mutual interests, goals, and potential collaboration areas</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Proposal Development</h3>
+                        <p class="step-description">Collaboratively develop a detailed partnership proposal and timeline</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Implementation</h3>
+                        <p class="step-description">Begin collaborative work with regular progress reviews and adjustments</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-form-section fade-in-up">
+                <h2 class="section-title">
+                    📧 Start a Partnership Conversation
+                </h2>
+                <div class="form-grid">
+                    <div class="form-info">
+                        <h3>Let's Collaborate</h3>
+                        <p>
+                            We're actively seeking partnerships with institutions that share our commitment to evidence-based mental wellness solutions. Whether you're interested in research collaboration, clinical validation, or international expansion, we'd love to hear from you.
+                        </p>
+                        <ul class="contact-details">
+                            <li>📧 partnerships@neintosick.org</li>
+                            <li>🌐 Handong Global University, Pohang, South Korea</li>
+                            <li>📞 Available for international video conferences</li>
+                            <li>⏰ Response within 48 hours</li>
+                        </ul>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="institution">Institution/Organization</label>
+                            <input type="text" id="institution" name="institution" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Your Role</label>
+                            <select id="role" name="role" required>
+                                <option value="">Select your role</option>
+                                <option value="professor">Professor/Researcher</option>
+                                <option value="administrator">University Administrator</option>
+                                <option value="clinician">Mental Health Professional</option>
+                                <option value="student">Graduate Student</option>
+                                <option value="industry">Industry Professional</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="partnership-type">Partnership Interest</label>
+                            <select id="partnership-type" name="partnership-type" required>
+                                <option value="">Select partnership type</option>
+                                <option value="academic">Academic Research Partnership</option>
+                                <option value="clinical">Clinical Validation Partnership</option>
+                                <option value="international">International Expansion</option>
+                                <option value="technology">Technology Development</option>
+                                <option value="multiple">Multiple Areas</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your institution, research interests, and how you'd like to collaborate with us..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            🚀 Submit Partnership Inquiry
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="global-impact fade-in-up">
+                <div class="impact-vision">
+                    <h2>🌍 Global Mental Wellness Vision</h2>
+                    <p>
+                        Our ultimate goal is to create a worldwide network of partners working together to make 
+                        mental wellness support accessible to every university student. By combining evidence-based 
+                        research with cultural sensitivity and technological innovation, we can build solutions 
+                        that transcend borders and truly serve the global community.
+                    </p>
+                    <div class="world-map">🗺️</div>
+                    <p>
+                        <strong>Together, we can make mental wellness a universal right, not a privilege.</strong>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Nein to Sick Team. Handong Global University. Building partnerships for global mental wellness.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+
+        // Partnership cards interactive effects
+        document.querySelectorAll('.partnership-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.background = 'linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%)';
+                const icon = card.querySelector('.partnership-icon');
+                icon.style.transform = 'scale(1.1) rotate(5deg)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.background = 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)';
+                const icon = card.querySelector('.partnership-icon');
+                icon.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+
+        // Area items hover effect
+        document.querySelectorAll('.area-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.background = 'rgba(255, 255, 255, 0.2)';
+                item.style.transform = 'scale(1.05) translateY(-5px)';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.style.background = 'rgba(255, 255, 255, 0.1)';
+                item.style.transform = 'scale(1) translateY(0)';
+            });
+        });
+
+        // Form validation and submission
+        const contactForm = document.querySelector('.contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Validate required fields
+            const requiredFields = ['institution', 'name', 'email', 'role', 'partnership-type', 'message'];
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                const input = document.getElementById(field);
+                if (!data[field] || data[field].trim() === '') {
+                    input.style.borderColor = '#ef4444';
+                    isValid = false;
+                } else {
+                    input.style.borderColor = '#10b981';
+                }
+            });
+            
+            if (isValid) {
+                // Simulate form submission
+                const submitButton = contactForm.querySelector('.btn-primary');
+                const originalText = submitButton.textContent;
+                
+                submitButton.textContent = '📨 Sending...';
+                submitButton.disabled = true;
+                
+                setTimeout(() => {
+                    submitButton.textContent = '✅ Message Sent!';
+                    submitButton.style.background = '#10b981';
+                    
+                    setTimeout(() => {
+                        submitButton.textContent = originalText;
+                        submitButton.style.background = '#7c3aed';
+                        submitButton.disabled = false;
+                        contactForm.reset();
+                        
+                        // Reset border colors
+                        requiredFields.forEach(field => {
+                            document.getElementById(field).style.borderColor = '#e5e7eb';
+                        });
+                    }, 3000);
+                }, 2000);
+                
+                console.log('Partnership inquiry submitted:', data);
+            } else {
+                // Show validation error
+                const submitButton = contactForm.querySelector('.btn-primary');
+                const originalText = submitButton.textContent;
+                
+                submitButton.textContent = '❌ Please complete all fields';
+                submitButton.style.background = '#ef4444';
+                
+                setTimeout(() => {
+                    submitButton.textContent = originalText;
+                    submitButton.style.background = '#7c3aed';
+                }, 3000);
+            }
+        });
+
+        // Dynamic form field interactions
+        document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(field => {
+            field.addEventListener('focus', () => {
+                field.style.borderColor = '#7c3aed';
+                field.style.transform = 'scale(1.02)';
+            });
+            
+            field.addEventListener('blur', () => {
+                if (field.value.trim() !== '') {
+                    field.style.borderColor = '#10b981';
+                } else {
+                    field.style.borderColor = '#e5e7eb';
+                }
+                field.style.transform = 'scale(1)';
+            });
+        });
+
+        // Process steps animation
+        const processSteps = document.querySelectorAll('.process-step');
+        let stepIndex = 0;
+
+        function highlightNextStep() {
+            processSteps.forEach((step, index) => {
+                if (index === stepIndex) {
+                    step.style.transform = 'scale(1.05)';
+                    step.style.background = 'rgba(255, 255, 255, 0.3)';
+                } else {
+                    step.style.transform = 'scale(1)';
+                    step.style.background = 'rgba(255, 255, 255, 0.2)';
+                }
+            });
+            
+            stepIndex = (stepIndex + 1) % processSteps.length;
+        }
+
+        // Highlight process steps every 3 seconds
+        setInterval(highlightNextStep, 3000);
+
+        // World map interaction
+        const worldMap = document.querySelector('.world-map');
+        if (worldMap) {
+            worldMap.addEventListener('click', () => {
+                worldMap.style.transform = 'scale(1.1) rotate(5deg)';
+                worldMap.textContent = '🌍';
+                
+                setTimeout(() => {
+                    worldMap.style.transform = 'scale(1) rotate(0deg)';
+                    worldMap.textContent = '🗺️';
+                }, 1000);
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Hero stats animation on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroStats = document.querySelectorAll('.hero-stat');
+            heroStats.forEach((stat, index) => {
+                setTimeout(() => {
+                    stat.style.transform = 'scale(1.05)';
+                    setTimeout(() => {
+                        stat.style.transform = 'scale(1)';
+                    }, 300);
+                }, index * 200);
+            });
+        });
+
+        // Partnership type selector enhancement
+        const partnershipSelect = document.getElementById('partnership-type');
+        if (partnershipSelect) {
+            partnershipSelect.addEventListener('change', (e) => {
+                const selectedValue = e.target.value;
+                const messageField = document.getElementById('message');
+                
+                let placeholder = "Tell us about your institution, research interests, and how you'd like to collaborate with us...";
+                
+                switch(selectedValue) {
+                    case 'academic':
+                        placeholder = "Please describe your research interests, current projects, and how academic collaboration with our team could advance both our work...";
+                        break;
+                    case 'clinical':
+                        placeholder = "Tell us about your clinical practice, expertise in mental health, and interest in validating digital wellness interventions...";
+                        break;
+                    case 'international':
+                        placeholder = "Describe your institution's location, cultural context, and vision for implementing mental wellness solutions in your region...";
+                        break;
+                    case 'technology':
+                        placeholder = "Share your technical expertise, development capabilities, and interest in advancing mental wellness technology...";
+                        break;
+                }
+                
+                messageField.placeholder = placeholder;
+            });
+        }
+    </script>
+</body>
+</html>
