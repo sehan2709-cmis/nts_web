@@ -3,617 +3,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Research Methodology - Nein to Sick's evidence-based approach to mental wellness app development through 300+ expert interviews">
-    <meta name="keywords" content="research methodology, mental health research, user interviews, evidence-based design, counseling psychology">
-    <meta name="author" content="Nein to Sick Team - Handong Global University">
+    <meta name="description" content="Research + Impact - Discover how Bandi's evidence-based approach to emotional wellness has been validated through rigorous research and real-world testing">
+    <meta name="keywords" content="Bandi app, emotional wellness, research-based mental health, emotion regulation, digital therapy, Nein to Sick">
+    <meta name="author" content="Nein to Sick Team">
     
-    <title>Research Methodology | Nein to Sick</title>
+    <title>Research + Impact | Bandi - Evidence-Based Emotional Wellness</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #f8fafc;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #7c3aed;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo::before {
-            content: "💜";
-            font-size: 2rem;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #374151;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: #7c3aed;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #7c3aed;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after, .nav-links a.active::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-        .research-hero {
-            margin-top: 80px;
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #7c3aed 0%, #3730a3 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .research-hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .research-hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 4rem 0;
-        }
-
-        .content-section {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #1f2937;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .section-content {
-            color: #6b7280;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* Research Process Timeline */
-        .timeline {
-            position: relative;
-            margin: 2rem 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 30px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #7c3aed, #c4b5fd);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2rem;
-            padding-left: 80px;
-        }
-
-        .timeline-marker {
-            position: absolute;
-            left: 20px;
-            top: 0;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #7c3aed;
-            border: 3px solid white;
-            box-shadow: 0 0 0 3px #e0e7ff;
-        }
-
-        .timeline-content {
-            background: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 15px;
-            border-left: 4px solid #7c3aed;
-        }
-
-        .timeline-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-description {
-            color: #6b7280;
-        }
-
-        /* Interview Breakdown */
-        .interview-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .interview-card {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid #e5e7eb;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .interview-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .interview-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .interview-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #7c3aed;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .interview-label {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 0.5rem;
-        }
-
-        .interview-description {
-            font-size: 0.95rem;
-            color: #6b7280;
-        }
-
-        /* Research Principles */
-        .principles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .principle-item {
-            background: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 15px;
-            border-left: 4px solid #7c3aed;
-        }
-
-        .principle-title {
-            font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 0.5rem;
-        }
-
-        .principle-description {
-            color: #6b7280;
-            font-size: 0.95rem;
-        }
-
-        /* Validation Process */
-        .validation-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .validation-step {
-            background: linear-gradient(135deg, #7c3aed, #3730a3);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        .step-number {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            opacity: 0.8;
-        }
-
-        .step-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .step-description {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* Download Section */
-        .download-section {
-            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .download-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 1rem;
-        }
-
-        .download-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 12px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background: #7c3aed;
-            color: white;
-            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #7c3aed;
-            border: 2px solid #7c3aed;
-        }
-
-        .btn-secondary:hover {
-            background: #7c3aed;
-            color: white;
-        }
-
-        /* Footer */
-        footer {
-            background: #1f2937;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            color: #d1d5db;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .research-hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .content-section {
-                padding: 2rem;
-            }
-
-            .timeline-item {
-                padding-left: 60px;
-            }
-
-            .download-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .interview-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
-    </style>
+    <link rel="stylesheet" href="css/research-methodology.css">
 </head>
 <body>
     <header>
         <nav class="container">
             <a href="index.html" class="logo">Nein to Sick</a>
             <ul class="nav-links">
-                <li><a href="research-methodology.html" class="active">Research</a></li>
+
+                <li><a href="research-methodology.html">Research</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="bandi.html">Bandi App</a></li>
-                <li><a href="impact-data.html">Impact Data</a></li>
+                <!-- <li><a href="impact-data.html">Impact Data</a></li> -->
                 <li><a href="partnerships.html">Partnerships</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <!-- <li><a href="publications.html">Publications</a></li> -->
+                <!-- <li><a href="news.html">News</a></li> -->
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="research-hero">
+        <!-- Hero Section -->
+        <section class="hero-section">
             <div class="container">
-                <h1>🔬 Research Methodology</h1>
-                <p>Our evidence-based approach to developing mental wellness technology through rigorous research and expert validation</p>
+                <div class="hero-content">
+                    <h1>Research + Impact</h1>
+                    <p class="hero-subtitle">
+                        Evidence-based emotional wellness technology, validated through rigorous research and real-world testing. 
+                        Discover how Bandi transforms emotional understanding through science, empathy, and human-centered design.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">100+</span>
+                            <span class="hero-stat-label">Users Tested</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">6</span>
+                            <span class="hero-stat-label">Expert Advisors</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">9</span>
+                            <span class="hero-stat-label">Testing Rounds</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">80%</span>
+                            <span class="hero-stat-label">Would Recommend</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <div class="container main-content">
-            <section class="content-section fade-in-up">
-                <h2 class="section-title">
-                    🎯 Research Overview
-                </h2>
-                <div class="section-content">
-                    <p>The Nein to Sick team believes that effective mental wellness technology must be grounded in solid research and validated by mental health professionals. Our approach to developing the Bandi app was built on a foundation of over 300 in-depth interviews, continuous expert consultation, and iterative validation processes.</p>
+            <!-- Section 1: Why This Matters -->
+            <section class="section fade-in-up" id="why-matters">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        🌟 Why This Matters
+                    </h2>
+                    <p class="section-subtitle">
+                        Understanding the mission and purpose behind Bandi's development
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <p class="content-text">
+                        Bandi wasn't born in a boardroom or sketched on a whiteboard filled with market projections. 
+                        It emerged from <span class="highlight-text">real conversations with people in need</span>, 
+                        countless hours of listening to those who struggle with understanding their own emotions, 
+                        and a deep commitment to bridging the gap between academic research and human experience.
+                    </p>
                     
-                    <p>This comprehensive research methodology ensures that every feature in the Bandi app is not only user-friendly but also psychologically sound and clinically relevant for our target audience of university students.</p>
+                    <p class="content-text">
+                        Our mission extends beyond developing another wellness app. We're working to democratize emotional literacy, 
+                        making evidence-based emotional wellness tools accessible to everyone—regardless of their background, 
+                        location, or previous experience with mental health resources. Through rigorous research and 
+                        <span class="highlight-text">iterative testing with real users</span>, 
+                        we've created a platform that doesn't just track emotions, but helps people develop a deeper, 
+                        more nuanced relationship with their inner lives.
+                    </p>
+                    
+                    <p class="content-text">
+                        This page shares not only our academic foundations but also the field-driven insights gained from 
+                        real users and mental health professionals. Every feature in Bandi has been shaped by both 
+                        scientific evidence and human stories—because we believe technology should serve humanity, 
+                        not the other way around.
+                    </p>
                 </div>
             </section>
 
-            <section class="content-section fade-in-up">
-                <h2 class="section-title">
-                    👥 Interview Participants Breakdown
+            <!-- Section 2: Research Foundation & Process -->
+            <section class="section fade-in-up stagger-1" id="research-foundation">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        🔬 Research Foundation & Process
+                    </h2>
+                    <p class="section-subtitle">
+                        Grounded in science, shaped by human experience
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <p class="content-text">
+                        Bandi originated as an emotional wellbeing intervention project within our university research lab, 
+                        where we continuously asked ourselves: <span class="highlight-text">"How can we help someone feel safer with their own emotions?"</span> 
+                        This simple yet profound question guided every decision in our development process.
+                    </p>
+                    
+                    <p class="content-text">
+                        Our approach is backed by extensive research in emotion regulation, reflection-based journaling, 
+                        mental health literacy, and behavioral psychology. We studied how people naturally process emotions, 
+                        what barriers prevent them from seeking help, and how digital tools can complement—not replace—
+                        human connection and professional support.
+                    </p>
+                </div>
+
+                <div class="research-grid">
+                    <div class="research-item">
+                        <div class="research-icon">🧠</div>
+                        <div class="research-title">Emotion Recognition</div>
+                        <div class="research-description">
+                            Advanced methodologies for helping users identify and name their emotional experiences with greater precision and self-awareness.
+                        </div>
+                    </div>
+                    <div class="research-item">
+                        <div class="research-icon">⚡</div>
+                        <div class="research-title">Micro-Intervention Design</div>
+                        <div class="research-description">
+                            Small, evidence-based interventions that can be seamlessly integrated into daily life without overwhelming users.
+                        </div>
+                    </div>
+                    <div class="research-item">
+                        <div class="research-icon">📝</div>
+                        <div class="research-title">Digital Reflection Tools</div>
+                        <div class="research-description">
+                            Technology-enhanced journaling and reflection methods that promote deeper self-understanding and emotional processing.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <p class="content-text">
+                        Our research process included <span class="highlight-text">3 comprehensive design sprints</span>, 
+                        <span class="highlight-text">9 user testing sessions</span> with approximately 100 participants, 
+                        and in-depth interviews with both users and mental health professionals. Each iteration taught us 
+                        something new about the delicate balance between providing support and respecting user autonomy.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 3: Impact So Far -->
+            <section class="section fade-in-up stagger-2" id="impact-results">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        📊 Impact So Far: Real Results from Real Users
+                    </h2>
+                    <p class="section-subtitle">
+                        User testing results and our global growth vision
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <p class="content-text">
+                        Currently in our pre-launch phase, we've conducted extensive testing with fewer than 100 users, 
+                        primarily in Korea. Now, we're preparing to scale globally, bringing Bandi's evidence-based approach 
+                        to diverse, underserved populations worldwide.
+                    </p>
+                </div>
+
+                <div class="testimonials">
+                    <div class="testimonial-stats">
+                        <div class="testimonial-stat">
+                            <span class="testimonial-stat-number">10</span>
+                            <span class="testimonial-stat-label">Long-term Testers</span>
+                        </div>
+                        <div class="testimonial-stat">
+                            <span class="testimonial-stat-number">3</span>
+                            <span class="testimonial-stat-label">Months Testing</span>
+                        </div>
+                        <div class="testimonial-stat">
+                            <span class="testimonial-stat-number">5+</span>
+                            <span class="testimonial-stat-label">Uses Per Week</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-grid">
+                        <div class="testimonial">
+                            <div class="testimonial-quote">
+                                "I discovered emotions I didn't even realize I had. Bandi helped me put words to feelings that I'd been carrying but couldn't name."
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-quote">
+                                "I thought I was just moody, but it turns out those feelings had names and meanings. Understanding this changed everything."
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-quote">
+                                "This helped me understand myself better. I feel more equipped to handle my emotions instead of being overwhelmed by them."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <p class="content-text">
+                        In our most comprehensive study, we worked with <span class="highlight-text">10 individuals who had previously received professional counseling or psychiatric treatment</span>. 
+                        Over three months, these participants used Bandi at least 5 times per week to reflect on their emotional states. 
+                        The results were encouraging: <span class="highlight-text">8 out of 10 said they would turn to Bandi when feeling down or struggling</span>, 
+                        while 2 preferred traditional offline journaling methods—a valuable reminder that different approaches work for different people.
+                    </p>
+                    
+                    <p class="content-text">
+                        We're now entering an exciting phase of global outreach, committed to reaching diverse, underserved populations worldwide 
+                        and ensuring that emotional wellness support isn't limited by geography, language, or economic barriers.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 4: Credibility -->
+            <section class="section fade-in-up stagger-3" id="credibility">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        🏆 Credibility: Expert Validation & Recognition
+                    </h2>
+                    <p class="section-subtitle">
+                        Backed by mental health professionals and recognized by leading institutions
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <p class="content-text">
+                        Our work has been validated through extensive consultation with mental health professionals and 
+                        recognized by leading institutions in technology and innovation.
+                    </p>
+                </div>
+
+                <div class="experts-grid">
+                    <div class="expert-item">
+                        <div class="expert-role">2 Counselors</div>
+                        <div class="expert-org">Korea Institute of Spiritual Healing</div>
+                    </div>
+                    <div class="expert-item">
+                        <div class="expert-role">1 Counselor</div>
+                        <div class="expert-org">MK Nest</div>
+                    </div>
+                    <div class="expert-item">
+                        <div class="expert-role">2 Therapists</div>
+                        <div class="expert-org">Rodem Counseling Center</div>
+                    </div>
+                    <div class="expert-item">
+                        <div class="expert-role">1 Professor</div>
+                        <div class="expert-org">Seoul Theological Seminary, Graduate School of Counseling</div>
+                    </div>
+                    <div class="expert-item">
+                        <div class="expert-role">1 Doctoral Candidate</div>
+                        <div class="expert-org">Counseling Psychology, Georgia State University</div>
+                    </div>
+                </div>
+
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <div class="award-icon">🥇</div>
+                        <div class="award-title">SW Startup Competition Grand Prize</div>
+                        <div class="award-year">2023</div>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">⭐</div>
+                        <div class="award-title">RPM Special Prize</div>
+                        <div class="award-year">2023</div>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">🚀</div>
+                        <div class="award-title">POSTECH Mini i-Core Award</div>
+                        <div class="award-year">2024</div>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">💰</div>
+                        <div class="award-title">Korean Government Startup Package Finalist</div>
+                        <div class="award-year">2024 (₩58M Grant)</div>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">📱</div>
+                        <div class="award-title">Official App Launch</div>
+                        <div class="award-year">2024 (Google Play & App Store)</div>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">🏆</div>
+                        <div class="award-title">RPM Startup Competition Grand Prize</div>
+                        <div class="award-year">2024</div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <p class="content-text">
+                        All team members are active participants in <span class="highlight-text">SW Factory Lab and VentureUs</span> 
+                        (IT startup society) since 2023, ensuring we stay connected to the latest developments in technology and innovation. 
+                        Our <span class="highlight-text">2025 global launch with multilingual support</span> represents the next major milestone 
+                        in making emotional wellness accessible worldwide.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 5: What's Next -->
+            <section class="section fade-in-up stagger-4" id="whats-next">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        🤝 What's Next: Let's Work Together
+                    </h2>
+                    <p class="section-subtitle">
+                        Partnership opportunities to scale our mission globally
+                    </p>
+                </div>
+
+                <div class="partnership-section">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #1f2937;">
+                        Ready to Reimagine Emotional Wellness?
+                    </h3>
+                    <p style="font-size: 1.1rem; color: #6b7280; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        We're seeking meaningful partnerships to scale our mission and bring evidence-based emotional wellness 
+                        to communities worldwide. Let's collaborate to create lasting impact.
+                    </p>
+
+                    <div class="partnership-grid">
+                        <div class="partnership-item">
+                            <div class="partnership-icon">🔬</div>
+                            <div class="partnership-title">Joint Research Projects</div>
+                            <div class="partnership-description">
+                                Collaborate on cutting-edge research in digital mental health, emotion regulation, and user experience design
+                            </div>
+                        </div>
+                        <div class="partnership-item">
+                            <div class="partnership-icon">🏥</div>
+                            <div class="partnership-title">Clinical Pilots</div>
+                            <div class="partnership-description">
+                                Partner with healthcare organizations and clinics to integrate Bandi into existing mental health support systems
+                            </div>
+                        </div>
+                        <div class="partnership-item">
+                            <div class="partnership-icon">👥</div>
+                            <div class="partnership-title">User Recruitment & Co-Design</div>
+                            <div class="partnership-description">
+                                Work together to recruit diverse user groups and co-design culturally sensitive emotional wellness solutions
+                            </div>
+                        </div>
+                        <div class="partnership-item">
+                            <div class="partnership-icon">🌍</div>
+                            <div class="partnership-title">International Professional Networks</div>
+                            <div class="partnership-description">
+                                Connect with mental health professionals globally to ensure our approach meets diverse cultural and clinical needs
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <p class="content-text">
+                        Our vision extends far beyond a single app. We're building a movement toward more accessible, 
+                        evidence-based emotional wellness support. Whether you're a researcher, clinician, organization leader, 
+                        or someone passionate about mental health innovation, we'd love to explore how we can work together 
+                        to create meaningful change in how people understand and care for their emotional wellbeing.
+                    </p>
+                    
+                    <p class="content-text">
+                        <span class="highlight-text">Together, we can reimagine emotional wellness across borders</span>, 
+                        ensuring that everyone—regardless of their background or location—has access to tools that help them 
+                        develop a healthier, more compassionate relationship with their emotions.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 6: Call to Action -->
+            <section class="cta-section fade-in-up" id="get-started">
+                <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: #1f2937;">
+                    Experience Bandi for Yourself
                 </h2>
-                <div class="interview-grid">
-                    <div class="interview-card">
-                        <div class="interview-icon">👩‍⚕️</div>
-                        <span class="interview-number">8</span>
-                        <div class="interview-label">Professional Counselors</div>
-                        <div class="interview-description">Licensed mental health professionals with expertise in counseling psychology and therapy practices</div>
-                    </div>
-                    <div class="interview-card">
-                        <div class="interview-icon">🎓</div>
-                        <span class="interview-number">3</span>
-                        <div class="interview-label">Graduate Students</div>
-                        <div class="interview-description">MA/Ph.D. students in counseling psychology programs with research and clinical experience</div>
-                    </div>
-                    <div class="interview-card">
-                        <div class="interview-icon">💙</div>
-                        <span class="interview-number">150</span>
-                        <div class="interview-label">Individuals with Lived Experience</div>
-                        <div class="interview-description">People who have received treatment for depression and anxiety, including medication and counseling</div>
-                    </div>
-                    <div class="interview-card">
-                        <div class="interview-icon">📊</div>
-                        <span class="interview-number">300+</span>
-                        <div class="interview-label">Total Interviews</div>
-                        <div class="interview-description">Comprehensive data collection ensuring diverse perspectives and robust validation</div>
-                    </div>
+                <p style="font-size: 1.1rem; color: #6b7280; max-width: 600px; margin: 0 auto;">
+                    Join thousands of users who are developing a deeper understanding of their emotions through 
+                    evidence-based tools designed with care, research, and human connection in mind.
+                </p>
+                
+                <div class="cta-buttons">
+                    <div class="store-buttons">
+                        <a href="https://apps.apple.com/kr/app/%EB%B0%98%EB%94%94-ai-%EA%B0%90%EC%A0%95-%EC%9D%BC%EC%A7%80/id6717578973" class="store-button" target="_blank">
+                            <img src="assets/images/appstore.png" alt="Download on App Store">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.bandi.official" class="store-button" target="_blank">
+                            <img src="assets/images/googleplay.png" alt="Get it on Google Play">
+                        </a>
+                    <!-- <a href="#" class="btn btn-primary" aria-label="Download Bandi app">
+                        📱 Download Bandi
+                    </a> -->
+                    <a href="partnerships.html" class="btn btn-secondary" aria-label="Contact us for partnerships">
+                        💬 Partner With Us
+                    </a>   
                 </div>
-            </section>
-
-            <section class="content-section fade-in-up">
-                <h2 class="section-title">
-                    📋 Research Process Timeline
-                </h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-title">Phase 1: Problem Identification</div>
-                            <div class="timeline-description">Initial research into mental health challenges facing university students in South Korea, identifying key pain points and unmet needs in current support systems.</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-title">Phase 2: Expert Consultation</div>
-                            <div class="timeline-description">In-depth interviews with 8 professional counselors and 3 graduate students to understand best practices in mental health support and digital intervention design.</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-title">Phase 3: User Experience Research</div>
-                            <div class="timeline-description">Comprehensive interviews with 150 individuals with lived experience of depression and anxiety treatment to understand user needs, preferences, and barriers.</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-title">Phase 4: Feature Development & Validation</div>
-                            <div class="timeline-description">Iterative design and testing of app features with continuous feedback from mental health professionals and target users.</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-title">Phase 5: Expert Review & Refinement</div>
-                            <div class="timeline-description">Final validation of the complete app experience by our panel of mental health experts to ensure clinical appropriateness and safety.</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="content-section fade-in-up">
-                <h2 class="section-title">
-                    🔬 Research Principles
-                </h2>
-                <div class="principles-grid">
-                    <div class="principle-item">
-                        <div class="principle-title">Evidence-Based Design</div>
-                        <div class="principle-description">Every feature is grounded in psychological research and validated therapeutic approaches</div>
-                    </div>
-                    <div class="principle-item">
-                        <div class="principle-title">User-Centered Approach</div>
-                        <div class="principle-description">Extensive user research ensures the app meets real needs and preferences of our target audience</div>
-                    </div>
-                    <div class="principle-item">
-                        <div class="principle-title">Expert Validation</div>
-                        <div class="principle-description">Continuous involvement of mental health professionals throughout the development process</div>
-                    </div>
-                    <div class="principle-item">
-                        <div class="principle-title">Ethical Considerations</div>
-                        <div class="principle-description">Careful attention to privacy, safety, and appropriate boundaries in digital mental health support</div>
-                    </div>
-                    <div class="principle-item">
-                        <div class="principle-title">Cultural Sensitivity</div>
-                        <div class="principle-description">Understanding of Korean cultural context while designing for potential global expansion</div>
-                    </div>
-                    <div class="principle-item">
-                        <div class="principle-title">Iterative Improvement</div>
-                        <div class="principle-description">Ongoing research and refinement based on user feedback and emerging best practices</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="content-section fade-in-up">
-                <h2 class="section-title">
-                    ✅ Validation Process
-                </h2>
-                <div class="validation-steps">
-                    <div class="validation-step">
-                        <div class="step-number">01</div>
-                        <div class="step-title">Research Design</div>
-                        <div class="step-description">Methodology approved by academic advisors</div>
-                    </div>
-                    <div class="validation-step">
-                        <div class="step-number">02</div>
-                        <div class="step-title">Data Collection</div>
-                        <div class="step-description">Structured interviews with diverse participant groups</div>
-                    </div>
-                    <div class="validation-step">
-                        <div class="step-number">03</div>
-                        <div class="step-title">Analysis & Synthesis</div>
-                        <div class="step-description">Thematic analysis of interview data with expert review</div>
-                    </div>
-                    <div class="validation-step">
-                        <div class="step-number">04</div>
-                        <div class="step-title">Feature Validation</div>
-                        <div class="step-description">Expert review of proposed app features and algorithms</div>
-                    </div>
-                    <div class="validation-step">
-                        <div class="step-number">05</div>
-                        <div class="step-title">Continuous Mentorship</div>
-                        <div class="step-description">Ongoing guidance from mental health professionals</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="download-section fade-in-up">
-                <h3 class="download-title">📋 Research Documentation</h3>
-                <p style="color: #6b7280; margin-bottom: 1.5rem;">Access detailed documentation of our research methodology and findings</p>
-                <div class="download-buttons">
-                    <a href="#" class="btn btn-primary">
-                        📄 Download Research Summary
-                    </a>
-                    <a href="#" class="btn btn-secondary">
-                        📊 View Interview Data
-                    </a>
-                    <a href="#" class="btn btn-secondary">
-                        🔬 Methodology Details
-                    </a>
-                </div>
+                
+                <p style="margin-top: 2rem; font-size: 0.95rem; color: #9ca3af;">
+                    Available on Google Play and App Store • Free to download • Privacy-focused design
+                </p>
             </section>
         </div>
     </main>
@@ -621,13 +419,31 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Nein to Sick Team. Handong Global University. Research conducted with ethical approval and participant consent.</p>
+                <p>&copy; 2025 Bandi by Nein to Sick Team. Handong Global University.</p>
+                <p>Evidence-based emotional wellness technology developed with care, research, and human connection.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                    All research conducted with ethical approval and informed participant consent.
+                </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Scroll animation
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -642,19 +458,183 @@
             });
         }, observerOptions);
 
+        // Apply animations to elements
         document.querySelectorAll('.fade-in-up').forEach(element => {
             element.style.opacity = '0';
             element.style.transform = 'translateY(30px)';
-            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
             observer.observe(element);
         });
 
-        // Timeline animation
-        document.querySelectorAll('.timeline-item').forEach((item, index) => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateX(-30px)';
-            item.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
-            observer.observe(item);
+        // Animated counters for statistics
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const isPercentage = target.toString().includes('%');
+            const isPlus = target.toString().includes('+');
+            const numericTarget = parseInt(target.toString().replace(/[^\d]/g, ''));
+            
+            const increment = numericTarget / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < numericTarget) {
+                    let displayValue = Math.floor(start);
+                    if (isPercentage) displayValue += '%';
+                    if (isPlus) displayValue += '+';
+                    element.textContent = displayValue;
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            
+            updateCounter();
+        }
+
+        // Counter animation observer
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.hero-stat-number, .testimonial-stat-number');
+                    counters.forEach(counter => {
+                        const target = counter.textContent;
+                        setTimeout(() => animateCounter(counter, target), Math.random() * 500);
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        // Observe hero stats and testimonial stats
+        document.querySelectorAll('.hero-stats, .testimonial-stats').forEach(section => {
+            counterObserver.observe(section);
+        });
+
+        // Enhanced card hover effects
+        document.querySelectorAll('.content-card, .award-card, .partnership-item').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+        });
+
+        // Button click effects
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                // Create ripple effect
+                const ripple = document.createElement('span');
+                const rect = button.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                button.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+                
+                // Scale effect
+                button.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    button.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+
+        // Testimonial rotation
+        const testimonials = document.querySelectorAll('.testimonial');
+        let currentTestimonial = 0;
+        
+        function rotateTestimonials() {
+            testimonials.forEach((testimonial, index) => {
+                if (index === currentTestimonial) {
+                    testimonial.style.transform = 'scale(1.02)';
+                    testimonial.style.boxShadow = '0 8px 30px rgba(255, 255, 255, 0.2)';
+                } else {
+                    testimonial.style.transform = 'scale(1)';
+                    testimonial.style.boxShadow = 'none';
+                }
+            });
+            
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        }
+
+        // Start testimonial rotation
+        if (testimonials.length > 0) {
+            setInterval(rotateTestimonials, 4000);
+        }
+
+        // Navigation active state
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fade in body
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+            
+            // Add CSS for ripple effect
+            const style = document.createElement('style');
+            style.textContent = `
+                .btn { position: relative; overflow: hidden; }
+                .ripple {
+                    position: absolute;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.3);
+                    transform: scale(0);
+                    animation: ripple-animation 0.6s linear;
+                    pointer-events: none;
+                }
+                @keyframes ripple-animation {
+                    to {
+                        transform: scale(4);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+
+        // Accessibility: Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-nav');
+            }
+        });
+
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-nav');
         });
     </script>
 </body>

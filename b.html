@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Report on Depressive Mood</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #f8fafc;
+            transition: all 0.3s ease;
+        }
+
+        /* Style Toggle Button */
+        .style-toggle {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            z-index: 9999;
+            background: white;
+            border-radius: 50px;
+            padding: 5px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 5px;
+        }
+
+        .toggle-btn {
+            padding: 10px 20px;
+            border: none;
+            background: transparent;
+            color: #6b7280;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 45px;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn.active {
+            background: linear-gradient(135deg, #7c3aed, #3730a3);
+            color: white;
+        }
+
+        .toggle-btn:hover:not(.active) {
+            background: rgba(124, 58, 237, 0.1);
+        }
+
+        /* Modern Style (from attached file) */
+        .modern-style .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .modern-style header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .modern-style nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .modern-style .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #7c3aed;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modern-style .logo::before {
+            content: "🧠";
+            font-size: 1.8rem;
+        }
+
+        .modern-style .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .modern-style .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .modern-style .nav-links a:hover {
+            color: #7c3aed;
+        }
+
+        .modern-style .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #7c3aed;
+            transition: width 0.3s ease;
+        }
+
+        .modern-style .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .modern-style .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-top: 0;
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(55, 48, 163, 0.05) 100%);
+            padding: 120px 0 80px;
+        }
+
+        .modern-style .hero-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .modern-style .hero-subtitle {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #7c3aed;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(124, 58, 237, 0.1);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+        }
+
+        .modern-style .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #7c3aed, #3730a3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .modern-style .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            color: #6b7280;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .modern-style .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .modern-style .btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modern-style .btn-primary {
+            background: linear-gradient(135deg, #7c3aed, #3730a3);
+            color: white;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+        }
+
+        .modern-style .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+        }
+
+        .modern-style .btn-secondary {
+            background: white;
+            color: #7c3aed;
+            border: 2px solid #7c3aed;
+        }
+
+        .modern-style .btn-secondary:hover {
+            background: rgba(124, 58, 237, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .modern-style .content-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .modern-style .content-section:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .modern-style .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .modern-style .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .modern-style .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .modern-style .content-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(124, 58, 237, 0.1);
+        }
+
+        .modern-style .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .modern-style .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .modern-style .content-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #7c3aed;
+        }
+
+        .modern-style .content-card p {
+            color: #4b5563;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .modern-style .content-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .modern-style .content-card ul li {
+            color: #4b5563;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .modern-style .content-card ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #7c3aed;
+        }
+
+        .modern-style .highlight-box {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(55, 48, 163, 0.02));
+            border-left: 4px solid #7c3aed;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .modern-style .highlight-box h4 {
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+
+        .modern-style .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .modern-style .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .modern-style .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+
+        .modern-style .stat-label {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        .modern-style .model-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #f8fafc 0%, white 100%);
+        }
+
+        .modern-style .model-diagram {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+        }
+
+        .modern-style .model-circle {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .modern-style .model-circle:hover {
+            transform: scale(1.05);
+        }
+
+        .modern-style .biological {
+            background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+            color: white;
+        }
+
+        .modern-style .psychological {
+            background: linear-gradient(135deg, #3730a3, #4c1d95);
+            color: white;
+        }
+
+        .modern-style .social {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+        }
+
+        .modern-style .model-circle h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .modern-style .model-circle p {
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+
+        .modern-style .treatment-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .modern-style .treatment-approach {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .modern-style .treatment-approach h3 {
+            color: #7c3aed;
+            margin-bottom: 1rem;
+        }
+
+        .modern-style footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 0;
+            margin-top: 0;
+        }
+
+        .modern-style .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .modern-style .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #e5e7eb;
+        }
+
+        .modern-style .footer-section p, .modern-style .footer-section ul {
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        .modern-style .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modern-style .footer-section ul li {
+            padding: 0.3rem 0;
+        }
+
+        .modern-style .footer-section ul li::before {
+            content: none;
+        }
+
+        .modern-style .footer-section a {
+            color: #7c3aed;
+            text-decoration: none;
+        }
+
+        .modern-style .footer-section a:hover {
+            color: #8b5cf6;
+        }
+
+        .modern-style .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+
+        /* Document Style (Notion-like) */
+        .document-style {
+            background: white;
+            min-height: 100vh;
+        }
+
+        .document-style .doc-header {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .document-style .doc-nav {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .document-style .doc-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #6b7280;
+        }
+
+        .document-style .doc-actions {
+            display: flex;
+            gap: 1rem;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .document-style .doc-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px;
+            background: white;
+        }
+
+        .document-style .doc-hero {
+            margin-bottom: 4rem;
+            padding-top: 2rem;
+        }
+
+        .document-style .doc-emoji {
+            font-size: 60px;
+            margin-bottom: 1rem;
+        }
+
+        .document-style h1.doc-main-title {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .document-style .doc-meta {
+            display: flex;
+            gap: 2rem;
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .document-style .doc-abstract {
+            background: #f9fafb;
+            border-left: 3px solid #7c3aed;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .document-style .doc-abstract p {
+            color: #4b5563;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .document-style .doc-toc {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .document-style .doc-toc h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #6b7280;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .document-style .doc-toc ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .document-style .doc-toc li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .document-style .doc-toc li:last-child {
+            border-bottom: none;
+        }
+
+        .document-style .doc-toc a {
+            color: #4b5563;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.2s;
+        }
+
+        .document-style .doc-toc a:hover {
+            color: #7c3aed;
+        }
+
+        .document-style .doc-toc a::before {
+            content: "→";
+            margin-right: 0.5rem;
+            color: #d1d5db;
+        }
+
+        .document-style h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            padding-top: 2rem;
+        }
+
+        .document-style h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #374151;
+        }
+
+        .document-style h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #4b5563;
+        }
+
+        .document-style p {
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .document-style ul, .document-style ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+            color: #374151;
+        }
+
+        .document-style li {
+            margin: 0.5rem 0;
+            line-height: 1.8;
+        }
+
+        .document-style .doc-callout {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .document-style .doc-callout p {
+            margin: 0;
+            color: #92400e;
+        }
+
+        .document-style .doc-table {
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+
+        .document-style table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .document-style th {
+            background: #f9fafb;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #4b5563;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .document-style td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+            color: #374151;
+        }
+
+        .document-style .doc-stat {
+            display: inline-block;
+            background: #ede9fe;
+            color: #7c3aed;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin: 0 4px;
+        }
+
+        .document-style blockquote {
+            border-left: 4px solid #7c3aed;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            color: #4b5563;
+            font-style: italic;
+        }
+
+        .document-style .doc-divider {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 3rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hide elements based on active style */
+        body.document-active .modern-style {
+            display: none;
+        }
+
+        body.modern-active .document-style {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .style-toggle {
+                top: auto;
+                bottom: 20px;
+            }
+
+            .modern-style .nav-links {
+                display: none;
+            }
+
+            .modern-style .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .modern-style .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modern-style .model-diagram {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .modern-style .stat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .document-style .doc-container {
+                padding: 20px;
+            }
+
+            .document-style h1.doc-main-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body class="modern-active">
+    <!-- Style Toggle Button -->
+    <div class="style-toggle">
+        <button class="toggle-btn active" onclick="toggleStyle('modern')">Modern View</button>
+        <button class="toggle-btn" onclick="toggleStyle('document')">Document View</button>
+    </div>
+
+    <!-- Modern Style Content (from attached file) -->
+    <div class="modern-style">
+        <header>
+            <div class="container">
+                <nav>
+                    <a href="#" class="logo">Depressive Mood Research</a>
+                    <ul class="nav-links">
+                        <li><a href="#clinical">Clinical Definition</a></li>
+                        <li><a href="#neurobiology">Neurobiology</a></li>
+                        <li><a href="#biopsychosocial">Biopsychosocial Model</a></li>
+                        <li><a href="#treatment">Treatment</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-in-up">
+                    <span class="hero-subtitle">Comprehensive Academic Report</span>
+                    <h1>Academic Report on Depressive Mood</h1>
+                    <p class="subtitle">
+                        Depressive mood is a complex neurobiological issue. Current psychiatry and neuroscience understand it as different from normal sadness and major depressive disorder. This understanding involves looking at many aspects of a person's life.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#clinical" class="btn btn-primary">Explore Clinical Definition</a>
+                        <a href="#biopsychosocial" class="btn btn-secondary">Learn Biopsychosocial Model</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clinical Definition Section -->
+        <section id="clinical" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Clinical Definition and How It's Different</h2>
+                <p class="section-subtitle">
+                    Groups like the World Health Organization (WHO) and the American Psychological Association (APA) say that depressive mood is more than just feeling sad. It's a clinically important symptom that comes from a mix of biological, psychological, and social things.
+                </p>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <span class="card-icon">📋</span>
+                        <h3>Official Terms and How to Diagnose It</h3>
+                        <p>The WHO's ICD-11 and the APA's DSM-5-TR use depressed mood as the official term. The DSM-5-TR says depressed mood is feeling sad, empty, or hopeless most of the time, almost every day.</p>
+                        <ul>
+                            <li>At least five out of nine or ten symptoms for two weeks or more</li>
+                            <li>Must cause big problems in social life, work, or other important parts of life</li>
+                            <li>ICD-11: feeling depressed or not enjoying things for at least two weeks</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <span class="card-icon">🔄</span>
+                        <h3>How It's Unlike Normal Sadness</h3>
+                        <p>Normal sadness usually happens because of certain things and lasts for a few days or weeks. Then, it gets better on its own. But depressive mood is a lasting feeling that affects everything in a person's life.</p>
+                        <ul>
+                            <li>Normal sadness doesn't stop daily activities</li>
+                            <li>Depressive mood causes big problems in personal, social, school, or work life</li>
+                            <li>Makes it hard to feel good, even when good things happen</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <span class="card-icon">🎯</span>
+                        <h3>How It Relates to Major Depressive Disorder</h3>
+                        <p>Depressive mood can be a symptom of different problems, like major depressive disorder, bipolar disorder, adjustment disorder, or mood disorder caused by drugs.</p>
+                        <ul>
+                            <li>Major depressive disorder: five or more symptoms for two weeks or more</li>
+                            <li>Severity levels: mild, moderate, or severe</li>
+                            <li>Must cause person to feel very upset or have problems in life</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Neurobiology Section -->
+        <section id="neurobiology" class="content-section">
+            <div class="container">
+                <h2 class="section-title">How Depressive Mood Works in the Brain</h2>
+                <p class="section-subtitle">
+                    Now, scientists know that depression involves many brain chemicals working together, not just one chemical being low.
+                </p>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">40-60%</div>
+                        <div class="stat-label">People with depression have high cortisol levels</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8-10%</div>
+                        <div class="stat-label">Hippocampus volume reduction</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">40-50%</div>
+                        <div class="stat-label">Genetic heritability of MDD</div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <span class="card-icon">🧪</span>
+                        <h3>Changes in Brain Chemicals</h3>
+                        <p>Serotonin affects mood, sleep, worry, hunger, and pain. Studies show that when healthy people have low levels of tryptophan, it doesn't cause depression.</p>
+                        <ul>
+                            <li>5-HT1A receptors especially important for controlling mood</li>
+                            <li>Dopamine important for feeling pleasure and wanting to do things</li>
+                            <li>Ketamine can rapidly help with depression by blocking NMDA receptors</li>
+                            <li>When mTOR signaling increases, it helps brain make new connections</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <span class="card-icon">🧠</span>
+                        <h3>Brain Connections and Networks</h3>
+                        <p>Depression causes problems with the way different parts of the brain connect and work together. This includes the limbic-cortical-striatal-pallidal-thalamic (LCSPT) circuit.</p>
+                        <ul>
+                            <li>Less gray matter and thinner cortex in prefrontal cortex</li>
+                            <li>Hippocampus smaller in people with depression (8-10%)</li>
+                            <li>Amygdala reacts too strongly to bad things</li>
+                            <li>Subgenual anterior cingulate cortex (area 25) less active</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <span class="card-icon">🔥</span>
+                        <h3>The Brain and Immune System</h3>
+                        <p>Recent research says that inflammation in the brain is a key part of depression. Studies show that people with depression have high levels of IL-6, TNF-α, and CRP.</p>
+                        <ul>
+                            <li>Microglia more active in brains of people with depression</li>
+                            <li>Stress causes release of IL-1β and IL-18</li>
+                            <li>ATP signaling activates microglial P2X7 receptors</li>
+                            <li>Treatments that reduce inflammation may be new way to treat depression</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <span class="card-icon">⚡</span>
+                        <h3>How the Brain Changes and BDNF</h3>
+                        <p>Depression changes the way brain connections work. It reduces the number of dendritic spines, makes it harder for long-term potentiation (LTP) to happen.</p>
+                        <ul>
+                            <li>Brain-derived neurotrophic factor (BDNF) important for these changes</li>
+                            <li>Less BDNF in hippocampus and prefrontal cortex causes problems</li>
+                            <li>More BDNF in ventral tegmental area-nucleus accumbens circuit can worsen depression</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <span class="card-icon">⚖️</span>
+                        <h3>HPA Axis Problems</h3>
+                        <p>High levels of cortisol are seen in 40-60% of people with depression. They also have more cortisol in the evening and problems with their circadian rhythms.</p>
+                        <ul>
+                            <li>Dexamethasone suppression test doesn't work well in 40-50% of depressed patients</li>
+                            <li>High cortisol levels can shrink hippocampus and damage brain cells</li>
+                            <li>Glucocorticoids cause problems with prefrontal cortex's executive functions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biopsychosocial Model Section -->
+        <section id="biopsychosocial" class="model-section">
+            <div class="container">
+                <h2 class="section-title">The Biopsychosocial Model's View</h2>
+                <p class="section-subtitle">
+                    Engel's biopsychosocial model from 1977 is the best way to understand depressive mood. It says that depression can't be explained by just one thing. Instead, it comes from a mix of biological, psychological, and social problems.
+                </p>
+
+                <div class="model-diagram">
+                    <div class="model-circle biological">
+                        <h3>Biological Things</h3>
+                        <p>Twin studies show 40-50% genetic heritability. Includes HPA axis problems, neurotransmitter problems, inflammation, and neural circuit problems.</p>
+                    </div>
+                    <div class="model-circle psychological">
+                        <h3>Psychological Things</h3>
+                        <p>Beck's cognitive triad, negative thoughts, trouble controlling emotions, problems with motivation and enjoying things.</p>
+                    </div>
+                    <div class="model-circle social">
+                        <h3>Social Things</h3>
+                        <p>WHO says bad experiences early in life are biggest risk factor. Includes poverty, unemployment, social isolation, and lack of community.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>How Different Things Interact</h4>
+                    <p>Research shows that genes and the environment interact to cause depression. Stress and genetic problems can explain 0.12% of the differences between people (p=0.0076). This is more common in women.</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <span class="card-icon">🧬</span>
+                        <h3>Biological Factors</h3>
+                        <p>Twin studies show that 40-50% of major depressive disorder is genetic. This means it's caused by many genes working together, not just one gene.</p>
+                        <ul>
+                            <li>Serotonin transporter gene (5-HTTLPR)</li>
+                            <li>BDNF, COMT genes</li>
+                            <li>FKBP5 (controls HPA axis function)</li>
+                            <li>Problems in brain work together, not on their own</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <span class="card-icon">💭</span>
+                        <h3>Psychological Factors</h3>
+                        <p>People with depression tend to focus on negative things, have trouble stopping thinking about them, and have problems controlling their thoughts when thinking about negative things.</p>
+                        <ul>
+                            <li>Beck's cognitive triad involves negative thoughts</li>
+                            <li>May not enjoy things, trouble getting motivated</li>
+                            <li>Problems sleeping and eating</li>
+                            <li>Trouble controlling emotions, less positive emotion</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <span class="card-icon">👥</span>
+                        <h3>Social Factors</h3>
+                        <p>The WHO says that bad experiences early in life are the biggest risk factor for depression. Trauma, abuse, and neglect can change how the brain develops.</p>
+                        <ul>
+                            <li>Poverty, income inequality, unemployment</li>
+                            <li>Job insecurity, education problems, housing problems</li>
+                            <li>Social isolation, loneliness</li>
+                            <li>Intimate partner violence, family problems</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <span class="card-icon">💪</span>
+                        <h3>Resilience</h3>
+                        <p>Resilience is how well people can handle problems. It involves biological things, psychological things, and social things.</p>
+                        <ul>
+                            <li>Good HPA axis function, stress-resistant genes</li>
+                            <li>Coping strategies, flexibility, self-confidence</li>
+                            <li>Social support, community, access to resources</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Treatment Section -->
+        <section id="treatment" class="treatment-section">
+            <div class="container">
+                <h2 class="section-title">Integrated Treatments</h2>
+                <p class="section-subtitle">
+                    The Collaborative Care Model (CoCM) is the best way to use biopsychosocial ideas to treat depression.
+                </p>
+
+                <div class="treatment-approach">
+                    <h3>Collaborative Care Model Components</h3>
+                    <p>Studies show that CoCM works well, with better results than usual care for different people and in different places.</p>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>Biological Treatments</h3>
+                            <ul>
+                                <li>Medication</li>
+                                <li>Treating other health problems</li>
+                                <li>Lifestyle changes</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Psychological Treatments</h3>
+                            <ul>
+                                <li>Cognitive-behavioral therapy</li>
+                                <li>Interpersonal therapy</li>
+                                <li>Mindfulness</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Social Treatments</h3>
+                            <ul>
+                                <li>Case management</li>
+                                <li>Social support</li>
+                                <li>Community programs</li>
+                                <li>Addressing social problems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>Future Directions</h4>
+                    <p>New treatments that target glutamate, inflammation, and neuroplasticity may be better than traditional treatments that just focus on monoamines. Future research should focus on how genes and the environment interact, how to combine biological and psychosocial treatments, how to adapt treatments to different cultures, and how to use precision medicine.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusions Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-title">Conclusions</h2>
+                <div class="highlight-box">
+                    <p>We now know that depressive mood involves many problems in the brain, including changes in neurotransmitters, the immune system, hormones, and how the brain makes new connections. It's not just one problem, but many problems working together. Problems in the limbic-cortical-striatal circuits are especially important.</p>
+                    <br>
+                    <p>Inflammation in the brain, problems with neuroplasticity, and HPA axis problems are important ways that stress, inflammation, and depression are linked. New treatments that target glutamate, inflammation, and neuroplasticity may be better than traditional treatments that just focus on monoamines.</p>
+                    <br>
+                    <p>The biopsychosocial model helps us develop personalized treatments based on each person's brain and problems. This understanding recognizes that depression is complex and supports using integrative models with good evidence for better results than fragmented care.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>About This Report</h4>
+                        <p>A comprehensive academic report on depressive mood, integrating current neuroscience and psychiatry understanding with the biopsychosocial model.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Key Topics</h4>
+                        <ul>
+                            <li>Clinical Definition</li>
+                            <li>Neurobiology</li>
+                            <li>Biopsychosocial Model</li>
+                            <li>Integrated Treatment</li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">WHO Guidelines</a></li>
+                            <li><a href="#">DSM-5-TR Criteria</a></li>
+                            <li><a href="#">ICD-11 Classification</a></li>
+                            <li><a href="#">Research Papers</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Academic Report on Depressive Mood. Educational and Research Purposes.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Document Style Content -->
+    <div class="document-style">
+        <div class="doc-header">
+            <div class="doc-nav">
+                <div class="doc-title">Academic Report • Research Paper</div>
+                <div class="doc-actions">
+                    <span>Last updated: 2024</span>
+                    <span>|</span>
+                    <span>Reading time: 15 min</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="doc-container">
+            <div class="doc-hero">
+                <div class="doc-emoji">🧠</div>
+                <h1 class="doc-main-title">Academic Report on Depressive Mood</h1>
+                <div class="doc-meta">
+                    <span>📚 Comprehensive Review</span>
+                    <span>🔬 Neuroscience & Psychiatry</span>
+                    <span>📊 Evidence-Based</span>
+                </div>
+            </div>
+
+            <div class="doc-abstract">
+                <p>
+                    Depressive mood is a complex neurobiological issue. Current psychiatry and neuroscience understand it as different from normal sadness and major depressive disorder. This understanding involves looking at many aspects of a person's life. Groups like the World Health Organization (WHO) and the American Psychological Association (APA) say that depressive mood is more than just feeling sad. It's a clinically important symptom that comes from a mix of biological, psychological, and social things.
+                </p>
+            </div>
+
+            <div class="doc-toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#doc-clinical">Clinical Definition and How It's Different</a></li>
+                    <li><a href="#doc-neurobiology">How Depressive Mood Works in the Brain</a></li>
+                    <li><a href="#doc-biopsychosocial">The Biopsychosocial Model's View</a></li>
+                    <li><a href="#doc-treatment">Integrated Treatments</a></li>
+                    <li><a href="#doc-conclusions">Conclusions</a></li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <h2 id="doc-clinical">Clinical Definition and How It's Different</h2>
+
+            <h3>Official Terms and How to Diagnose It</h3>
+            <p>
+                The WHO's ICD-11 and the APA's DSM-5-TR use depressed mood as the official term. The DSM-5-TR says depressed mood is feeling sad, empty, or hopeless most of the time, almost every day. The ICD-11 says it's feeling depressed or not enjoying things for at least two weeks, most of the time, almost every day.
+            </p>
+
+            <p>
+                To doctors, depressive mood is when someone meets certain rules. The DSM-5-TR and ICD-11 say the person must have at least five out of nine or ten symptoms for two weeks or more. These symptoms must also cause big problems in their social life, work, or other important parts of their life.
+            </p>
+
+            <h3>How It's Unlike Normal Sadness</h3>
+            <p>
+                Normal sadness usually happens because of certain things and lasts for a few days or weeks. Then, it gets better on its own. But depressive mood is a lasting feeling that affects everything in a person's life. It also makes it hard for them to feel good, even when good things happen.
+            </p>
+
+            <div class="doc-callout">
+                <p>
+                    💡 Normal sadness usually doesn't stop people from doing their daily activities or enjoying things. Depressive mood, on the other hand, can cause big problems in a person's personal, social, school, or work life.
+                </p>
+            </div>
+
+            <p>
+                The ICD-11 has a rule that says normal grief isn't the same as depression. To be diagnosed with depression, the person must have extreme guilt that's not related to the person who died, see or hear things that aren't there, think about suicide, or have trouble moving.
+            </p>
+
+            <h3>How It Relates to Major Depressive Disorder</h3>
+            <p>
+                Depressive mood can be a symptom of different problems, like major depressive disorder, bipolar disorder, adjustment disorder, or mood disorder caused by drugs. Major depressive disorder is when someone has enough symptoms (five or more) for a long enough time (two weeks or more) and these symptoms cause big problems in their life.
+            </p>
+
+            <p>
+                Both systems say how bad the symptoms are (mild, moderate, or severe). They also say that the symptoms must cause the person to feel very upset or have problems in their life.
+            </p>
+
+            <hr class="doc-divider">
+
+            <h2 id="doc-neurobiology">How Depressive Mood Works in the Brain</h2>
+
+            <p>
+                Now, scientists know that depression involves many brain chemicals working together, not just one chemical being low.
+            </p>
+
+            <h3>Changes in Brain Chemicals</h3>
+
+            <p>
+                Serotonin affects mood, sleep, worry, hunger, and pain. Studies show that when healthy people have low levels of tryptophan, it doesn't cause depression. But it can cause depression to come back in people who were treated for it with SSRIs. 5-HT1A receptors are especially important for controlling mood.
+            </p>
+
+            <p>
+                Dopamine is important for feeling pleasure and wanting to do things. Research shows that BDNF in one part of the brain (the ventral tegmental area-nucleus accumbens pathway) can make depression worse. This is different from what happens in other parts of the brain.
+            </p>
+
+            <p>
+                Recent research on glutamate has changed how we understand depression. Ketamine can rapidly help with depression by blocking NMDA receptors. This gives us new ideas about how depression works. When mTOR signaling increases, it helps the brain make new connections and express BDNF, which are key things that help with depression.
+            </p>
+
+            <h3>Brain Connections and Networks</h3>
+
+            <p>
+                Depression causes problems with the way different parts of the brain connect and work together. This includes the limbic-cortical-striatal-pallidal-thalamic (LCSPT) circuit.
+            </p>
+
+            <div class="doc-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Brain Region</th>
+                            <th>Changes in Depression</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Prefrontal Cortex</td>
+                            <td>Less gray matter, thinner cortex</td>
+                            <td>Problems with emotional control</td>
+                        </tr>
+                        <tr>
+                            <td>Hippocampus</td>
+                            <td>8-10% smaller volume</td>
+                            <td>Memory and stress response issues</td>
+                        </tr>
+                        <tr>
+                            <td>Amygdala</td>
+                            <td>Overactive to negative stimuli</td>
+                            <td>Increased threat sensitivity</td>
+                        </tr>
+                        <tr>
+                            <td>Subgenual ACC</td>
+                            <td>Less active</td>
+                            <td>Mood regulation problems</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>The Brain and Immune System</h3>
+
+            <p>
+                Recent research says that inflammation in the brain is a key part of depression. Studies show that people with depression have high levels of <span class="doc-stat">IL-6</span>, <span class="doc-stat">TNF-α</span>, and <span class="doc-stat">CRP</span>. Imaging studies show that microglia are more active in the brains of people with depression.
+            </p>
+
+            <ul>
+                <li>Stress causes the release of IL-1β and IL-18 through NLRP3 inflammasome activation</li>
+                <li>ATP signaling activates microglial P2X7 receptors</li>
+                <li>Treatments that reduce inflammation may be a new way to treat depression</li>
+            </ul>
+
+            <h3>How the Brain Changes and BDNF</h3>
+
+            <p>
+                Depression changes the way brain connections work. It reduces the number of dendritic spines, makes it harder for long-term potentiation (LTP) to happen, and makes long-term depression (LTD) more likely to happen in the prefrontal cortex and hippocampus.
+            </p>
+
+            <blockquote>
+                Brain-derived neurotrophic factor (BDNF) is important for these changes. When there's less BDNF in the hippocampus and prefrontal cortex, it can cause problems with making new brain cells and reduce the size of these areas.
+            </blockquote>
+
+            <h3>HPA Axis Problems</h3>
+
+            <p>
+                High levels of cortisol are seen in <span class="doc-stat">40-60%</span> of people with depression. They also have more cortisol in the evening and problems with their circadian rhythms. The dexamethasone suppression test doesn't work as well in <span class="doc-stat">40-50%</span> of people with depression. This means their HPA axis isn't working right because their glucocorticoid receptors are less sensitive.
+            </p>
+
+            <hr class="doc-divider">
+
+            <h2 id="doc-biopsychosocial">The Biopsychosocial Model's View</h2>
+
+            <h3>How Different Things Interact</h3>
+
+            <p>
+                Engel's biopsychosocial model from 1977 is the best way to understand depressive mood. It says that depression can't be explained by just one thing. Instead, it comes from a mix of biological, psychological, and social problems.
+            </p>
+
+            <p>
+                Research shows that genes and the environment interact to cause depression. Stress and genetic problems can explain 0.12% of the differences between people (p=0.0076). This is more common in women.
+            </p>
+
+            <h3>Biological Things</h3>
+
+            <p>
+                Twin studies show that <span class="doc-stat">40-50%</span> of major depressive disorder is genetic. This means it's caused by many genes working together, not just one gene. Important genes include:
+            </p>
+
+            <ul>
+                <li>Serotonin transporter gene (5-HTTLPR)</li>
+                <li>BDNF genes</li>
+                <li>COMT genes</li>
+                <li>FKBP5 (which controls HPA axis function)</li>
+            </ul>
+
+            <p>
+                Problems in the brain include HPA axis problems, neurotransmitter problems, inflammation, and neural circuit problems. These things work together, not on their own.
+            </p>
+
+            <h3>Psychological Things</h3>
+
+            <p>
+                People with depression tend to focus on negative things, have trouble stopping thinking about them, and have problems controlling their thoughts when thinking about negative things. Beck's cognitive triad involves negative thoughts, assumptions, and beliefs about themselves.
+            </p>
+
+            <p>
+                People with depression may not enjoy things, have trouble getting motivated, avoid things, and have problems sleeping and eating. They also have trouble controlling their emotions and don't feel as much positive emotion.
+            </p>
+
+            <h3>Social Things</h3>
+
+            <div class="doc-callout">
+                <p>
+                    ⚠️ The WHO says that bad experiences early in life are the biggest risk factor for depression. Trauma, abuse, and neglect can change how the brain develops and cause lasting problems.
+                </p>
+            </div>
+
+            <p>Social problems include:</p>
+            <ul>
+                <li>Poverty, income inequality, unemployment</li>
+                <li>Job insecurity, education problems, housing problems</li>
+                <li>Social isolation, loneliness</li>
+                <li>Intimate partner violence (especially for women)</li>
+                <li>Family problems, lack of community</li>
+            </ul>
+
+            <h3>Resilience</h3>
+
+            <p>
+                Resilience is how well people can handle problems. It involves:
+            </p>
+
+            <ul>
+                <li><strong>Biological things:</strong> good HPA axis function, stress-resistant genes</li>
+                <li><strong>Psychological things:</strong> coping strategies, flexibility, self-confidence</li>
+                <li><strong>Social things:</strong> social support, community, access to resources</li>
+            </ul>
+
+            <hr class="doc-divider">
+
+            <h2 id="doc-treatment">Integrated Treatments</h2>
+
+            <p>
+                The Collaborative Care Model (CoCM) is the best way to use biopsychosocial ideas to treat depression. It involves primary care doctors, behavioral health managers, psychiatric consultation, measurement-based treatment, and tracking patients. Studies show that CoCM works well, with better results than usual care for different people and in different places.
+            </p>
+
+            <h3>Multimodal Treatment</h3>
+
+            <p>Multimodal treatment combines:</p>
+
+            <div class="doc-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Treatment Type</th>
+                            <th>Components</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Biological treatments</strong></td>
+                            <td>Medication, treating other health problems, lifestyle changes</td>
+                            <td>Address neurochemical imbalances</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Psychological treatments</strong></td>
+                            <td>Cognitive-behavioral therapy, interpersonal therapy, mindfulness</td>
+                            <td>Change thought patterns and behaviors</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Social treatments</strong></td>
+                            <td>Case management, social support, community programs, addressing social problems</td>
+                            <td>Improve social environment</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr class="doc-divider">
+
+            <h2 id="doc-conclusions">Conclusions</h2>
+
+            <p>
+                We now know that depressive mood involves many problems in the brain, including changes in neurotransmitters, the immune system, hormones, and how the brain makes new connections. It's not just one problem, but many problems working together. Problems in the limbic-cortical-striatal circuits are especially important.
+            </p>
+
+            <p>
+                Inflammation in the brain, problems with neuroplasticity, and HPA axis problems are important ways that stress, inflammation, and depression are linked. New treatments that target glutamate, inflammation, and neuroplasticity may be better than traditional treatments that just focus on monoamines.
+            </p>
+
+            <p>
+                The biopsychosocial model helps us develop personalized treatments based on each person's brain and problems. Future research should focus on how genes and the environment interact, how to combine biological and psychosocial treatments, how to adapt treatments to different cultures, and how to use precision medicine.
+            </p>
+
+            <blockquote>
+                This understanding recognizes that depression is complex and supports using integrative models with good evidence for better results than fragmented care.
+            </blockquote>
+
+            <hr class="doc-divider">
+
+            <div style="margin-top: 4rem; padding: 2rem; background: #f9fafb; border-radius: 8px;">
+                <p style="color: #6b7280; font-size: 14px; margin: 0;">
+                    <strong>Document Information:</strong><br>
+                    Academic Report on Depressive Mood<br>
+                    Comprehensive review integrating current neuroscience and psychiatry understanding<br>
+                    © 2024 - Educational and Research Purposes
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle between modern and document styles
+        function toggleStyle(style) {
+            const body = document.body;
+            const toggleBtns = document.querySelectorAll('.toggle-btn');
+            
+            if (style === 'modern') {
+                body.className = 'modern-active';
+                toggleBtns[0].classList.add('active');
+                toggleBtns[1].classList.remove('active');
+            } else {
+                body.className = 'document-active';
+                toggleBtns[1].classList.add('active');
+                toggleBtns[0].classList.remove('active');
+            }
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.content-card, .stat-card, .model-circle').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Progress indicator
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            
+            // Create progress bar if it doesn't exist
+            let progressBar = document.getElementById('progressBar');
+            if (!progressBar) {
+                progressBar = document.createElement('div');
+                progressBar.id = 'progressBar';
+                progressBar.style.cssText = 'position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #7c3aed, #3730a3); z-index: 10000; transition: width 0.3s;';
+                document.body.appendChild(progressBar);
+            }
+            progressBar.style.width = scrolled + '%';
+        });
+
+        // Initialize
+        document.body.className = 'modern-active';
+    </script>
+</body>
+</html>
