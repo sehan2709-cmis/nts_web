@@ -47,11 +47,6 @@ nav {
     gap: 10px;
 }
 
-.logo::before {
-    content: "💜";
-    font-size: 2rem;
-}
-
 .nav-links {
     display: flex;
     list-style: none;
@@ -84,6 +79,7 @@ nav {
 .nav-links a:hover::after, .nav-links a.active::after {
     width: 100%;
 }
+
 /* Hero Section with Photo Background */
 .hero-section {
     min-height: 100vh;

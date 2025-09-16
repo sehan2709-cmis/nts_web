@@ -1,17 +1,3 @@
-/**
- * Nein to Sick - Main JavaScript File
- * Evidence-based mental wellness technology website
- * 
- * Features:
- * - Mobile navigation
- * - Smooth scrolling
- * - Scroll animations
- * - Form validation
- * - Notification system
- * - Multi-language support
- * - Accessibility enhancements
- */
-
 'use strict';
 
 // Global configuration

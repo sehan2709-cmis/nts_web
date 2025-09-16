@@ -46,11 +46,6 @@ nav {
     gap: 10px;
 }
 
-.logo::before {
-    content: "💜";
-    font-size: 2rem;
-}
-
 .nav-links {
     display: flex;
     list-style: none;
@@ -96,7 +91,7 @@ nav {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.4), 
         rgba(0, 0, 0, 0.4)
-    ), url('../assets/images/teamphoto5.jpeg');
+    ), url('../assets/images/teamphoto.jpeg');
 
     /* Alternative background images you can use instead:
     

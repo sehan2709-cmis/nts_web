@@ -18,6 +18,7 @@ body {
     padding: 0 20px;
 }
 
+
 /* Header */
 header {
     background: rgba(255, 255, 255, 0.95);
@@ -45,11 +46,6 @@ nav {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.logo::before {
-    content: "💜";
-    font-size: 2rem;
 }
 
 .nav-links {
